@@ -1,0 +1,83 @@
+.playbackPanel
+{
+  background-color: transparent;
+  padding: 4px;
+  position: fixed;
+  margin-left: -100px;
+  left: 50%;
+  bottom: 26px;
+}
+
+.playbackPanel-control, .playbackPanel-currentTurn
+{
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.playbackPanel-label
+{
+  text-align: right;
+  display: inline-block;
+  background-color: transparent;
+  width: 100px;
+  margin-bottom: -20px;
+  font-family: FollowTheMoneyFont;
+  font-size: 12px;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.playbackPanel-currentTurn
+{
+  width: 65px;
+  background-color: #000000;
+  box-shadow: 0px 0px 0px 1px #26537c inset;
+  font-family: FollowTheMoneyFont;
+  vertical-align: middle;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.control-rewind
+{
+  background-image: url('../images/playback_rewind.png');
+}
+
+.control-forward
+{
+  background-image: url('../images/playback_ff.png');
+}
+
+.control-first
+{
+  background-image: url('../images/playback_start.png');
+}
+
+.control-last
+{
+  background-image: url('../images/playback_end.png');
+}
+
+.control-show-actions, .control-hide-actions
+{
+  width: 40px;
+  font-size: 12px;
+}
+
+.control-view-state, .control-view-terrorist
+{
+  margin-left: 20px;
+  display: none;
+}
+
+.control-view-state
+{
+  background-image: url('../images/options_icon_switchview_state.png');
+}
+
+.control-view-terrorist
+{
+  background-image: url('../images/options_icon_switchview_terrorist.png');
+}

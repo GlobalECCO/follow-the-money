@@ -1,0 +1,118 @@
+.networkNode
+{
+  width: 60px;
+  height: 100px;
+  background-color: #64a8d1;
+  padding: 6px;
+}
+
+.networkNode:hover 
+{
+  
+  box-shadow: 0px 0px 0px 3px #ddeeff;
+  cursor: default;
+}
+
+.networkNode-highlighted
+{
+  background-color: #B3DCF5;
+}
+
+.networkNode-highlighted:hover
+{
+  box-shadow: 0px 0px 0px 3px #ddeeff;
+}
+
+.networkNode-selected
+{
+  background-color: #f6ba0c;
+}
+
+.networkNode-selected:hover
+{
+  background-color: #f6ba0c;
+  box-shadow: 0px 0px 0px 3px #ffda2c;
+}
+
+.networkNodePortrait
+{
+  width: 100%;
+  height: 60%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.networkNodePortrait-bank
+{
+  background-image: url('images/node_bank_100px.png');
+}
+
+.networkNodePortrait-hawala
+{
+  background-image: url('images/node_hawala_100px.png');
+}
+
+.networkNodePortrait-courier
+{
+  background-image: url('images/node_courier_100px.png');
+}
+
+.networkNodePortrait-wiretransfer
+{
+  background-image: url('images/node_wiretransfer_100px.png');
+}
+
+.networkNodeName
+{
+  text-align: right;
+  font-family: FollowTheMoneyFont;
+  color: #08436a;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10px;
+  line-height: 11px;
+}
+
+.networkNodesNotifications
+{
+  width: 60px;
+  bottom: 6px;
+  position: absolute;
+  display: block;
+}
+
+.networkNodeIconAgents, .networkNodeIconTransfers, .networkNodeIconAlerts
+{
+  display: inline-block;
+  text-align: right;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  bottom: 0px;
+  background-color: #08436a;
+  margin: 2px;
+}
+
+.networkNodeIconAgents, .networkNodeIconTransfers
+{
+  float: right;
+}
+
+.networkNodeIconAlerts
+{
+  float: right;
+}
+
+.networkNodeIconAgents-active
+{
+  background-color: #008740;
+}
+
+.networkNodeIconTransfers-active
+{
+  background-color: #1051f8;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "FollowTheMoney",
+  "description": "test game server",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.2.5",
+    "mongoose": "3.8.8",
+    "cas": "git://github.com/Longhouse-Games/node-cas.git",
+    "request": "2.16",
+    "winston": "0.7.1",
+    "socket.io": "0.9.x",
+    "bitarray": "latest"
+  },
+  "main": "ftm.js",
+  "scripts": {
+    "preinstall": "npm install -g uglifycss uglify-js"
+  },
+  "repository": "",
+  "author": "MOVES Institute",
+  "license": "BSD"
+}

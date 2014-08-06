@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Follow The Money</title>
+    <link rel='stylesheet' type='text/css' href='../client/css/common.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/playercard.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/networknodes.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/submenu.maketransfer.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/submenu.nodeview.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/pendingtransactions.css'/>
+    <script src='http://code.jquery.com/jquery-2.0.1.js'></script>
+    <script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <script type='text/javascript' src='util.utility.js'></script>
+    <script type='text/javascript' src='ui.pendingtransactions.js'></script>
+    <script>
+      $('.add').click();
+    </script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      $(document).ready(
+        function () {
+          var temp = new PendingTransactions($('body'));
+          $('.addPending').click(
+            function () {
+              temp.addTransaction(3000, "Rooby Dooby", transactionTypes.PENDING);
+            }
+          );
+          
+          $('.addInTransit').click(
+            function () {
+              temp.addTransaction(1000, "Mr. X", transactionTypes.INTRANSIT);
+            }
+          );
+        }
+      );
+    </script>
+    <div class="btn addInTransit" style="position: fixed; bottom: 0px; left: 0px">in-transit</div>
+    <div class="btn addPending" style="position: fixed; bottom: 0px; left: 100px">pending</div>
+  </body>
+ </html>

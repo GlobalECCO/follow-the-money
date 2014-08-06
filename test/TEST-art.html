@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Follow The Money</title>
+    <link rel='stylesheet' type='text/css' href='../client/css/common.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/playercard.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/networknodes.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/submenu.maketransfer.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/submenu.nodeview.css'/>
+    <link rel='stylesheet' type='text/css' href='../client/css/submenu.playercardview.css'/>
+    <script src='http://code.jquery.com/jquery-2.0.1.js'></script>
+    <script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <script type='text/javascript' src='util.utility.js'></script>
+    <script type='text/javascript' src='ui.playercard.js'></script>
+    <script type='text/javascript' src='ui.networknode.js'></script>
+    <script type='text/javascript' src='ui.submenu.maketransfer.js'></script>
+    <script type='text/javascript' src='ui.submenu.nodeview.js'></script>
+    <script type='text/javascript' src='ui.submenu.playercardview.js'></script>
+  </head>
+  <body>
+
+    <script type='text/javascript'>
+      // player cards
+      var temp1 = new PlayerCard($('body'), 'portrait-funder01', "BlastCorp", PlayerCardThemes.redPlayer,5);
+      var temp2 = new PlayerCard($('body'), 'portrait-leader01', "Mr. X", PlayerCardThemes.redLeader,10);
+      var temp3 = new PlayerCard($('body'), 'portrait-terrorist01', "Minion 1", PlayerCardThemes.redTerrorist, 6);
+      var temp4 = new PlayerCard($('body'), 'portrait-blueagent01', "Agent 1", PlayerCardThemes.blueAgent);
+
+      temp1.setPaymentMeter('50%');
+      temp1.setFundsMeter('70%');
+
+      // network nodes
+      var nid1 = new NetworkNode ($('body'), "Ameribank", NetworkNodeThemes.bank);
+      var nid2 = new NetworkNode ($('body'), "Eastern Union", NetworkNodeThemes.wireTransfer);
+
+      //submenu
+      var transfersubmenu = new SubMenuMakeTransfer($('body'), 14000, [{node: "Courier", fee: 100, name: "Courier"},{node: "Bank", fee: 30, name: "Ameribank"},{node: "Courier", fee: 100, name: "Courier"},{node: "Bank", fee: 20, name: "Shittibank"},{node: "RedLeader", fee: 0}], 1000);
+      transfersubmenu.element.css('left', '200px');
+      transfersubmenu.element.css('top', '100px');
+
+      var nodeview = new SubMenuNodeView($('body'), {}, 0);
+      nodeview.element.css('left', '200px');
+      nodeview.element.css('top', '500px');
+
+      var playercardview = new SubMenuPlayerCardView($('body'), 'Mr. X', 5000, 10, 17, 500000, 345000);
+      playercardview.element.css('left', '700px');
+      playercardview.element.css('top', '500px');
+
+      var highlighted = false;
+      var selected = false;
+      $(document).ready(
+      function () {
+        $('.highlight').click(
+          function () {
+            highlighted = !highlighted;
+            nid1.highlight(highlighted);
+            temp1.highlight(highlighted);
+            temp2.highlight(highlighted);
+            temp3.highlight(highlighted);
+            temp4.highlight(highlighted);
+          }
+        );
+        $('.select').click(
+          function () {
+            selected = !selected;
+            nid1.select(selected);
+            temp1.select(selected);
+            temp2.select(selected);
+            temp3.select(selected);
+            temp4.select(selected);
+          }
+        )
+      }
+      );
+    </script>
+    <div class="Button highlight">highlight</div>
+    <div class="Button select">select</div>
+  </body>
+ </html>

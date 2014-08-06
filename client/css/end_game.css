@@ -1,0 +1,274 @@
+.endGameContainer
+{
+  left: 15%;
+  top: -10%;
+  width: 70%;
+  height: 120%;
+  padding: 20px;
+  padding-bottom: 16px;
+  position: relative;
+  display: block;
+  background-color: #000000;
+  cursor: default;
+  z-index: 5;
+  box-shadow: 0px 0px 14px 0px #ff9500;
+  overflow: hidden;
+}
+
+.endGameHeading
+{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  color: white;
+  font-size: 3.0em;
+  margin-bottom: 10px;
+}
+
+.endGameWinner
+{
+  font-size: 32px;
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  display: inline-block;
+}
+
+.Winner
+{
+  color: #ffffff;
+}
+
+.terroristWins
+{
+  color: #a61d00;
+}
+
+.stateWins
+{
+  color: #51a6f4;
+}
+
+.article-container
+{
+  width: 100%;
+  position: relative;
+  height: 90%;
+}
+
+.article
+{
+  background-color: #d8d8d8;
+  overflow-y: hidden;
+  padding: 10px;
+  left: 0%;
+  top: 0%;
+  height: 496px;
+}
+
+.article-subsection
+{
+  width: 100%;
+  height: 70%;
+}
+
+.article-heading, .article-subheading
+{
+  color: #464646;
+  display: block;
+}
+
+.article-heading
+{
+  font-family: FreeRoad;
+  width: 100%;
+  font-size: 4em;
+  line-height: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article-subheading
+{
+  font-family: FranklinGothicDemi;
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 2px;
+}
+
+.article-text, .article-photo-section, .article-subsection-text
+{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.article-photo-section
+{
+  width: 65%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  clear: right;
+
+}
+
+.article-subsection-text
+{
+  width: 33%;
+  margin-right: 4px;
+  float: right;
+}
+
+.article-photo
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.article-text
+{
+  float: right;
+}
+
+.column-section
+{
+  display: block;
+}
+
+.photo-stateWins-ChoseWisely
+{
+  background-image: url('../images/article_photo_terroristTakenIntoCustody.jpg');
+}
+
+.photo-stateWins-TerroristBroke
+{
+  background-image: url('../images/article_photo_terroristBroke.jpg');
+}
+
+.photo-stateWins-LeaderStarved
+{
+  background-image: url('../images/article_photo_leaderStarved.jpg');
+}
+
+.photo-stateWins-MinionsStarved
+{
+  background-image: url('../images/article_photo_minionsStarved.jpg');
+}
+
+.photo-terroristWins
+{
+  background-image: url('../images/article_photo_chosePoorly.jpg');
+}
+
+.article-storyText
+{
+  width: 100%;
+  height: 100%;
+}
+
+.column-section
+{
+  text-align: center;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.column
+{
+  display: inline-block;
+  font-size: small;
+  margin: 4px;
+  text-align: justify;
+  font-family: FranklinGothicBook;
+  position: relative;
+}
+
+.single-column
+{
+  width: 100%;
+}
+
+.double-column
+{
+  width: 47%;
+}
+
+.triple-column
+{
+  width: 31%;
+}
+
+.left-column
+{
+  float: left;
+}
+
+.right-column
+{
+  float: right;
+}
+
+.byTheNumbers-heading
+{
+  font-family: FranklinGothicDemi;
+  color: #464646;
+  font-size: 1.2em;
+}
+
+.byTheNumbers-line
+{
+  display: block;
+  font-family: FranklinGothicBook;
+  font-size: 0.8em;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.byTheNumbers-value, .byTheNumbers-text
+{
+  display: inline-block;
+  font-size: 1em;
+}
+
+.byTheNumbers-value
+{
+  margin-right: 8px;
+  width: 65px;
+  background-color: #bbb;
+  text-align: center;
+  float: left;
+}
+
+.byTheNumbers-text
+{
+  overflow: hidden;
+  text-align: left;
+}
+
+.byTheNumbers
+{
+  display: block;
+  font-family: FranklinGothicDemi;
+  color: #464646;
+  margin-top: 12px;
+}
+
+.endGame-close-button
+{
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  position: relative;
+  float: right;
+  line-height: 16px;
+  top: -20px;
+  right: -20px;
+}
+
+}

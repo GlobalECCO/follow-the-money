@@ -1,0 +1,236 @@
+.playerCard
+{
+  padding: 10px;
+  
+}
+
+.playerCard-color-redplayer, .playerCard-color-redleader
+{
+  background-color: #a52b22;
+}
+
+.playerCard-color-redterrorist
+{
+  background-color: #c0532f;
+}
+
+.playerCard-color-blue
+{
+  background-color: #3d9ad1;
+}
+
+.playerCard:hover
+{
+  cursor: default;
+}
+
+.playerCard-color-redplayer:hover, .playerCard-color-redleader:hover
+{
+  box-shadow: 0px 0px 0px 3px #ff8e60;
+}
+
+.playerCard-color-redterrorist:hover
+{
+  box-shadow: 0px 0px 0px 3px #ffa493;
+}
+
+.playerCard-color-blue:hover
+{
+  box-shadow: 0px 0px 0px 3px #5dbaf1;
+}
+
+.playerCard-color-redplayer-highlight, .playerCard-color-redleader-highlight
+{
+  background-color: #ff6e40;
+}
+
+.playerCard-color-redterrorist-highlight
+{
+  background-color: #ff9473;
+}
+
+.playerCard-color-blue-highlight
+{
+  background-color: #64a8d1;
+}
+
+.playerCard-color-redplayer-select, .playerCard-color-redleader-select
+{
+  background-color: #ff3d00;
+}
+
+.playerCard-color-redterrorist-select
+{
+  background-color: #ff3d00;
+}
+
+.playerCard-color-blue-select
+{
+  background-color: #23adff;
+}
+
+.playerCardLarge
+{
+  width: 100px;
+  height: 140px;
+}
+
+.playerCardSmall
+{
+  width: 80px;
+  height: 114px;
+}
+
+.playerCardMini
+{
+  width: 40px;
+  height: 60px;
+}
+
+.playerCardPortrait
+{
+  width: 100%;
+  height: 70%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.portrait-funder01
+{
+  background-image: url('images/portrait_funder_01_100px.png');
+}
+
+.portrait-leader01
+{
+  background-image: url('images/portrait_leader_01_100px.png');
+}
+
+.portrait-terrorist01
+{
+  background-image: url('images/portrait_terrorist_01_100px.png');
+}
+
+.portrait-terrorist02
+{
+  background-image: url('images/portrait_terrorist_02_100px.png');
+}
+
+.portrait-blueagent01
+{
+  background-image: url('images/portrait_blue_agent_01_100px.png');
+}
+
+.playerCardName
+{
+  text-align: right;
+  font-family: FollowTheMoneyFont;
+  color: white;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playerCard-textSize-Large
+{
+  font-size: 14px;
+}
+
+.playerCard-textSize-Small
+{
+  font-size: 11px;
+}
+
+.playerCardMeters
+{
+  width: 100%;
+}
+
+.playerCardFundsMeter
+{
+  margin-top: 4px;
+  width: 100%;
+  height: 16px;
+}
+
+.playerCardFundsMeter, .playerCardPaymentMeter
+{
+  width: 100%;
+  height: 6px;
+}
+
+.playerCardMeter-back-red
+{
+  background-color: #491410;
+}
+
+.playerCardMeter-back-blue
+{
+  background-color: #001827;
+}
+
+.playerCardFundsMeter
+{
+  margin-bottom: 4px;
+}
+
+.playerCardPaymentMeter
+{
+  margin-top: 4px;
+}
+
+.playerCardPaymentSegment
+{
+  display: inline-block;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+}
+
+.playerCardPaymentSegment-redleader
+{
+  box-shadow: 1px 0px 0px 0px #a52b22 inset;
+}
+
+.playerCardPaymentSegment-redplayer
+{
+  box-shadow: 1px 0px 0px 0px #a52b22 inset;
+}
+
+.playerCardPaymentSegment-redterrorist
+{
+  box-shadow: 1px 0px 0px 0px #c0532f inset;
+}
+
+.playerCardPaymentSegment-blue
+{
+  box-shadow: 1px 0px 0px 0px #3d9ad1 inset;
+}
+
+.playerCardPaymentMeterFill
+{
+  height: 100%;
+  width: 100%;
+}
+
+.playerCardPaymentMeterFill-full
+{
+  background-color: #f6ba0c;
+}
+
+.playerCardFundsMeterFill
+{
+  background-color: #ff3d00;
+  height: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.playerCardElement-hidden
+{
+  display: none;
+}

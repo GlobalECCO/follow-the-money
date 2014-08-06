@@ -1,0 +1,177 @@
+.nodeSubMenuTransferContainer
+{
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  background-color: #141414;
+  cursor: default;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: left;
+}
+
+.nodeSubMenuTransferContainer:hover
+{
+  /*box-shadow: 0px 0px 0px 2px #f5c400;*/
+  background-color: #545454;
+  color: #141414;
+  cursor: pointer;
+}
+
+.nodeSubMenuTransferHeading, .nodeSubMenuTransferSubHeading
+{
+  float: left;
+  top: 4px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  color: white;
+  display: inline-block;
+  position: relative;
+  padding-left: 10px;
+  font-size: 0.8em;
+}
+
+.nodeSubMenuTransferSubHeading
+{
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+.nodeSubMenuTransferIcon
+{
+  display: inline-block;
+  background-image: url('../images/item_transfer_100px.png');
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2px;
+  position: relative;
+  float: left;
+}
+
+.nodeSubMenuTransferButtons
+{
+  float: right;
+  position: relative;
+  padding-right: 3px;
+}
+
+.nodeSubMenuTransferButtons-follow,
+.nodeSubMenuTransferButtons-freeze,
+.nodeSubMenuTransferButtons-ignore,
+.nodeSubMenuTransferButtons-reroute,
+.nodeSubMenuTransferButtons-courier,
+.nodeSubMenuTransfer-UndoButton
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 11px;
+  font-size: 10px;
+  display: inline-block;
+  padding: 2px;
+}
+
+.nodeSubMenuTransfer-UndoButton
+{
+  float: right;
+  position: absolute;
+  right: 3px;
+}
+
+.nodeSubMenuTransferFrozen-Terrorist
+{
+  margin: auto;
+  color: #ff2c00;
+  font-size: 60px;
+  font-family: FollowTheMoneyFont;
+  text-align: center;
+  line-height: 80%
+}
+
+.nodeSubMenuTransferFrozen-State, .nodeSubMenuTransferFollowed-State,
+{
+  position: relative;
+  top: -24px;
+  width: 100%;
+  padding: 0px;
+  height: 2px;
+}
+
+.nodeSubMenuTransferFrozen-State
+{
+  background-color: #043a6b;
+}
+
+.nodeSubMenuTransferFollowed-State
+{
+  background-color: #238b49;
+}
+
+.nodeSubMenuTransferFrozen-State-Text, .nodeSubMenuTransferFollowed-State-Text, .nodeSubMenuTransferIgnored-State-Text, .nodeSubMenuTransferCourier-Terrorist-Text
+{
+  font-family: FollowTheMoneyFontBold;
+  font-size: 16px;
+  text-align: left;
+  position: absolute;
+  display: inline-block;
+  left: 30%;
+  top: 4px;
+  width: auto;
+  height: auto;
+  padding-left: 25px;
+}
+
+.nodeSubMenuTransferCourier-Terrorist-Text
+{
+  left: 45%;
+}
+
+.nodeSubMenuTransferFrozen-State-Text
+{
+  color: #679fd2;
+}
+
+.nodeSubMenuTransferFollowed-State-Text
+{
+  color: #a61d00;
+}
+
+.nodeSubMenuTransferIgnored-State-Text
+{
+  color: #dddddd;
+}
+
+.nodeSubMenuTransferCourier-Terrorist-Text
+{
+  color: #458B00;
+  padding-left: 0px;
+}
+
+.nodeSubMenuTransferFollowIcon, .nodeSubMenuTransferFrozenIcon
+{
+  background-size: 100%;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 30%;
+  top: 4px;
+}
+
+.nodeSubMenuTransferFollowIcon
+{
+  background-image: url('../images/agent_status_following_50px.png');
+}
+
+.nodeSubMenuTransferFrozenIcon
+{
+  background-image: url('../images/agent_status_frozen_50px.png');
+}

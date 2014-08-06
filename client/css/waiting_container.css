@@ -1,0 +1,17 @@
+#waiting-root {
+  width: 50%;
+  height: 24px;
+  background-color: transparent;
+  position: relative;
+  top: 90px;
+  text-align: center;
+  margin: auto;
+}
+
+.waiting-block {
+  background-color:blue;
+  display:inline-block;
+  width:10.0%;
+  height:100%;
+  opacity:0.2;
+}

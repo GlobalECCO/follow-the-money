@@ -1,0 +1,609 @@
+.playerCard, .playerCard-unknown
+{
+  padding-bottom: 10px;
+  z-index: 2;
+  display: inline-block;
+  position: relative;
+  border: 2px solid transparent;
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s;*/
+}
+
+.playerCard
+{
+  cursor: pointer;
+}
+
+.playerCardAbsolute
+{
+  position: absolute;
+}
+
+.playerCard-color-redplayer, .playerCard-color-redleader
+{
+/*  background-color: #A61D00;*/
+  /*background-color: transparent;*/
+}
+
+.playerCard-color-redterrorist
+{
+  /*background-color: #BF4930;*/
+  /*background-color: transparent;*/
+}
+
+.playerCard-color-blue
+{
+  background-color: transparent;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.playerCard-color-blue:hover
+{
+  background-color: #ff9500;
+  /*border: 2px solid #71c6ff;*/
+  /*box-shadow: 0px 0px 12px 4px #679fd2;*/
+}
+
+.playerCard-color-redplayer-highlight, .playerCard-color-redleader-highlight
+{
+  background-color: #ff9500;
+}
+
+.playerCard-color-redterrorist-highlight
+{
+  background-color: #ff9500;
+}
+
+.playerCard-color-blue-highlight
+{
+  background-color: #679FD2;
+}
+
+.playerCard-color-highlight
+{
+  background-color: #141414;
+  border: 2px solid #141414;
+  box-shadow: 0px 0px 12px 4px #679fd2;
+}
+
+.playerCard-color-highlight:hover
+{
+  border: 2px solid #71c6ff;
+}
+
+.playerCard-color-darken
+{
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.playerCard-color-redplayer-select, .playerCard-color-redleader-select, .playerCard-color-redterrorist-select
+{
+  background-color: #FF9500;
+}
+
+.playerCard-color-blue-select
+{
+  background-color: #000000;
+  border: 2px solid #ff9500;
+  box-shadow: 0px 0px 12px 4px #ff9500;
+}
+
+.playerCard-color-blue-select:hover
+{
+  background-color: #f5c400;
+  border: 2px solid #ff9500;
+  box-shadow: 0px 0px 12px 4px #ff9500;
+}
+
+/*Generic*/
+.playerCard-color-select
+{
+  background-color: #000000;
+  border: 2px solid #ff9500;
+  box-shadow: 0px 0px 12px 4px #ff9500;
+}
+
+.playerCard-color-redplayer-select:hover, .playerCard-color-redleader-select:hover, .playerCard-color-redterrorist-select:hover
+{
+  box-shadow: 0px 0px 0px 4px #ffc573;
+}
+
+.playerCardLarge
+{
+  width: 60px;
+  height: 90px;
+}
+
+.playerCardSmall
+{
+  width: 40px;
+  height: 60px;
+}
+
+.playerCardMini
+{
+  width: 40px;
+  height: 60px;
+  padding: 3px;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 0px;
+}
+
+.playerCardPortrait
+{
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.portrait-funder01
+{
+  background-image: url('../images/full_body_silhouette_funder.png');
+}
+
+.portrait-funder01:hover
+{
+  background-image: url('../images/full_body_silhouette_funder_hover.png');
+}
+
+.portrait-terrorist00
+{
+  background-image: url('../images/full_body_silhouette_leader01.png');
+}
+
+.portrait-terrorist00:hover
+{
+  background-image: url('../images/full_body_silhouette_leader01_hover.png');
+}
+
+.portrait-terrorist01
+{
+  background-image: url('../images/full_body_silhouette_terrorist01.png');
+}
+
+.portrait-terrorist01:hover
+{
+  background-image: url('../images/full_body_silhouette_terrorist01_hover.png');
+}
+
+.portrait-terrorist01-disabled
+{
+  background-image: url('../images/full_body_silhouette_terrorist01_disabled.png');
+}
+
+.portrait-terrorist01-disabled:hover
+{
+  background-image: url('../images/full_body_silhouette_terrorist01_disabled_hover.png');
+}
+
+.portrait-blueagent01
+{
+  background-image: url('../images/portrait_blue_agent_01_100px.png');
+  width: 40px;
+  height: 100%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 0px;
+  margin-left: -3px;
+
+  /*-webkit-transition: background-image 0.3s;*/
+  /*-moz-transition: background-image 0.3s;*/
+  /*-ms-transition: background-image 0.3s;*/
+  /*transition: background-image 0.3s;*/
+}
+
+.portrait-blueagent01:hover
+{
+/*  background-image: url('../images/portrait_blue_agent_01_selected_100px.png');*/
+}
+
+.playerCardName
+{
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  color: white;
+  width: 200%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: -50%;
+}
+
+.playerCard-textSize-Large
+{
+  font-size: 12px;
+}
+
+.playerCard-textSize-Small
+{
+  font-size: 11px;
+}
+
+.playerCard-textSize-Mini
+{
+  font-size: 9px;
+  left: 0px;
+  top: -10px;
+}
+
+.playerCardMeters
+{
+  width: 100%;
+}
+
+.playerCardFundsMeter
+{
+  margin-top: 4px;
+  width: 100%;
+  height: 16px;
+}
+
+.playerCardFundsMeter, .playerCardPaymentMeter
+{
+  width: 100%;
+  height: 3px;
+}
+
+.playerCardMeter-back-red
+{
+  background-color: #491410;
+}
+
+.playerCardMeter-back-blue
+{
+  background-color: #001827;
+}
+
+.playerCardFundsMeter
+{
+  margin-bottom: 2px;
+}
+
+.playerCardPaymentMeter
+{
+  margin-top: 2px;
+}
+
+.playerCardPaymentSegment
+{
+  display: inline-block;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  box-shadow: 1px 0px 0px 0px #141414 inset;
+  background-color: #141414;
+}
+
+.playerCardPaymentSegment-redleader
+{
+  box-shadow: 1px 0px 0px 0px #a52b22 inset;
+}
+
+.playerCardPaymentSegment-redplayer
+{
+  box-shadow: 1px 0px 0px 0px #a52b22 inset;
+}
+
+.playerCardPaymentSegment-redterrorist
+{
+  box-shadow: 1px 0px 0px 0px #c0532f inset;
+}
+
+.playerCardPaymentSegment-blue
+{
+  box-shadow: 1px 0px 0px 0px #3d9ad1 inset;
+}
+
+.playerCardPaymentMeterFill
+{
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 0px 0px 0px #141414 inset;
+  background-color: #000000;
+}
+
+.playerCardPaymentMeterFill-full
+{
+  background-color: #f6ba0c;
+}
+
+.playerCardPaymentMeterFill-credit
+{
+  background-color: #51a6f4;
+}
+.playerCardPaymentMeterFill-critical
+{
+  /*background-color: #f5c400;*/
+  animation-duration: 1s;
+  animation-name: critical-pulse;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: critical-pulse;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.playerCardFundsMeterFill
+{
+  background-color: #ff3d00;
+  height: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.playerCardElement-hidden
+{
+  display: none;
+}
+
+.playerCardNotifications
+{
+  width: 50px;
+  height: 100%;
+  /*bottom: 6px;*/
+  /*position: absolute;*/
+  position: absolute;
+  float: right;
+  top: -10px;
+  right: -44px;
+  display: block;
+}
+
+.playerCard-tabcolor-redleader, .playerCard-tabcolor-redplayer
+{
+  background-color: #A61D00;
+}
+
+.playerCard-tabcolor-redleader:hover, .playerCard-tabcolor-redplayer:hover, .playerCard-tabcolor-redterrorist:hover
+{
+  box-shadow: 0px 0px 0px 2px #ff9500;
+}
+
+.playerCard-disabled
+{
+  background-color: #a40000;
+}
+
+.agentStatusIcon
+{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10%;
+  left: 56%;
+  background-size: 25px 25px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  border-radius: 100%;
+  border: 2px solid #51A6F4;
+  padding: 3px;
+}
+
+.agentStatusIcon-frozen
+{
+  background-image: url('../images/agent_status_frozen_50px.png');
+}
+
+.agentStatusIcon-following
+{
+  background-image: url('../images/agent_status_following_50px.png');
+}
+
+.agentStatusIcon-focusing
+{
+  background-image: url('../images/agent_status_monitoring_50px.png');
+}
+
+.agentStatusIcon-lockdown
+{
+  background-image: url('../images/agent_status_lockdown_50px.png');
+}
+
+.agentStatusIcon-disabled
+{
+  background-image: url('../images/agent_status_disabled_50px.png');
+  position: relative;
+  left: 1px;
+  top: 8px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  background-size: 100%;
+}
+
+.playerCard-unknown
+{
+  font-size: 30px;
+  font-family: FollowTheMoneyFont;
+  color: #ffffff;
+  padding-top: 16px;
+  position: relative;
+  left: 2px;
+  top: -0px;
+  /*text-shadow: 0px 0px 4px #ffffff;*/
+}
+
+.playerCard-unknown:hover
+{
+  cursor: default;
+}
+
+.playerCardPortrait-agentID
+{
+  position: absolute;
+  left: 4px;
+  left: 45%;
+  top: 20%;
+  font-family: FollowTheMoneyFontBold;
+  font-size: 13px;
+  color: #a1f6ff;
+}
+
+.playerCard-previousTask
+{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border: 2px solid #384857;
+  border-radius: 100%;
+  left: -4px;
+  top: -2px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  padding: 2px;
+}
+
+.playerCard-leaderLabel
+{
+  width: 60px;
+  position: absolute;
+  left: 0%;
+  top: 110%;
+  height: 8px;
+  color: white;
+  background-color: transparent;
+  font-size: 20px;
+  text-align: center;
+}
+
+.playerCard-fundsOverview
+{
+  width: 150%;
+  position: absolute;
+  left: -30%;
+  top: 115%;
+  color: #ffffff;
+  background-color: gray;
+  padding: 2px 3px;
+}
+
+.playerCard-fundsOverview-style-reserves
+{
+  color: #000000;
+  background-color: #f5c400;
+}
+
+.playerCard-fundsOverview-style-full
+{
+  color: #ffffff;
+  background-color: #51a6f4;
+}
+
+.playerCard-fundsOverview-style-critical
+{
+  color: #ffffff;
+  background-color: #a61d00;
+}
+
+/*.playerCard-fundsOverview-style-reserves:before
+{
+  border-right-color: #f5c400;
+}*/
+
+/*.playerCard-fundsOverview-style-full:before
+{
+  border-right-color: #51a6f4;
+}*/
+
+/*.playerCard-fundsOverview-style-critical:before
+{
+  border-right-color: #a61d00;
+}*/
+
+/*.playerCard-fundsOverview-style-reserves:before,
+.playerCard-fundsOverview-style-full:before,
+.playerCard-fundsOverview-style-critical:before
+{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -30px;
+  top:0px;
+  border-style: solid;
+
+  border-right-width: 20px;
+
+  border-top-color: transparent;
+  border-top-width: 10px;
+
+  border-bottom-color: transparent;
+  border-bottom-width: 10px;
+
+  border-left-color: transparent;
+  border-left-width: 10px;
+}*/
+
+
+.playerCard-fundsOverview-LabelLeft, .playerCard-fundsOverview-LabelRight
+{
+  font-family: FollowTheMoneyFont;
+  position: relative;
+}
+
+.playerCard-fundsOverview-LabelLeft
+{
+  margin-top: 2px;
+  vertical-align: bottom;
+  float: left;
+  font-size: x-small;
+}
+
+.playerCard-fundsOverview-LabelRight
+{
+  float: right;
+  text-align: right;
+  font-size: small;
+}
+
+.terrorist-accused
+{
+  width: 120%;
+  height: 120%;
+  background-size: 100%;
+  background-image: url('../images/accused_terrorist.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+}
+
+.toggle-hidden
+{
+  visibility: hidden;
+}
+
+.Button-CreateTransfer
+{
+  width:40px;
+  height:25px;
+  margin-left:8px;
+  background-image: url('../images/create_transaction.png');
+  background-repeat: no-repeat;
+  background-position: center 2px;
+  background-size: 80% 80%;
+}

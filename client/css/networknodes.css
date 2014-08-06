@@ -1,0 +1,397 @@
+.networkNode
+{
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  padding: 6px;
+  z-index: 2;
+  /*border: 2px solid #679fd2;*/
+  /*position: relative;*/
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  cursor: pointer;
+}
+
+.networkNode:hover
+{
+  /*background-color: #141414;*/
+  /*border: 2px solid #71c6ff;*/
+  /*box-shadow: 0px 0px 12px 4px #679fd2;*/
+}
+
+.networkNode-highlighted
+{
+  background-color: #141414;
+  box-shadow: 0px 0px 20px 8px #679fd2;
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+}
+
+.networkNode-highlighted:hover
+{
+  background-color: #141414;
+  border: 2px solid #71c6ff;
+/*  box-shadow: 0px 0px 0px 3px #63dc90;*/
+}
+
+.networkNode-darkened
+{
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5);
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+}
+
+.networkNode-selected
+{
+  background-color: #141414;
+  box-shadow: 0px 0px 12px 4px #ff9500;
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;*/
+}
+
+.networkNode-selected:hover
+{
+  /*background-color: #f6ba0c;*/
+  /*box-shadow: 0px 0px 0px 3px #ffda2c;*/
+}
+
+.networkNodePortraitContainer
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.networkNodePortrait
+{
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  float: left;
+  top: 0;
+  position: relative;
+  /*left: -30px;*/
+}
+
+.networkNodesNotifications, .networkNodesAgentTasks
+{
+  width: 30px;
+  height: 100%;
+  /*bottom: 6px;*/
+  /*position: absolute;*/
+  display: block;
+  float: left;
+  position: absolute;
+  top: -10px;
+}
+
+.networkNodesNotifications
+{
+  right: -24px;
+}
+
+.networkNodesAgentTasks
+{
+  top: -25%;
+  height: 200%;
+
+  /*pre animated values*/
+  left: 24px;
+  opacity: 0;
+}
+
+.networkNodePortrait-bank
+{
+  background-image: url('../images/node_bank_100px.png');
+}
+
+.-networkNodePortrait-bank:hover
+{
+/*  background-image: url('../images/node_bank_hover_100px.png');*/
+}
+
+.networkNodePortrait-bank-highlighted
+{
+  background-image: url('../images/node_bank_hover_100px.png');
+}
+
+.networkNodePortrait-hawala
+{
+  background-image: url('../images/node_hawala_100px.png');
+}
+
+.networkNodePortrait-courier
+{
+  background-image: url('../images/node_courier_100px.png');
+}
+
+.networkNodePortrait-wiretransfer
+{
+  background-image: url('../images/node_wiretransfer_100px.png');
+}
+
+.networkNodeName
+{
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  color: #dddddd;
+  width: 220%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  line-height: 12px;
+  display: inline-block;
+  margin-top: 0px;
+  /*float: right;*/
+  top: 2px;
+  position: relative;
+  vertical-align: top;
+  left: -50%;
+}
+
+.networkNodeIcon
+{
+  position: absolute;
+  right: 0px;
+  /*display: none;*/display: inline-block;
+  position: relative;
+  text-align: right;
+
+  /*bottom: 0px;*/
+  background-color: #00B945;
+  margin: 0px;
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  font-size: 10px;
+  margin-top: 4px;
+  /*position: relative;*/
+  padding: 6px;
+  border-radius: 100%;
+}
+
+.networkNodeIconAgents, .networkNodeIconTransfers
+{
+  width: 10px;
+  height: 10px;
+}
+
+.networkNodeIconLocking, .networkNodeIconFocusing,
+.networkNodeIconDisabled, .networkNodeIconFollowing,
+.networkNodeIconFreezing
+{
+  width: 24px;
+  height: 16px;
+  padding: 4px;
+  position: relative;
+  padding: 0px;
+  border-radius: 0%;
+  background-color: transparent;
+  display: none;
+}
+/*
+.networkNodeIconDisabled
+{
+  left: 44px;
+  top: -10px;
+}
+
+.networkNodeIconFollowing
+{
+  left: 29px;
+  top: -7px;
+}
+
+.networkNodeIconFreezing
+{
+  left: 17px;
+  top: 1px;
+}
+
+.networkNodeIconLocking
+{
+  left: 8px;
+  top: 13px;
+}
+
+.networkNodeIconFocusing
+{
+  left: 4px;
+  top: 28px;
+}
+*/
+.networkNodeIconAgents:hover, .networkNodeIconTransfers:hover, .networkNodeIconFunds:hover, .networkNodeIconMakeTransfer:hover
+{
+  /*box-shadow: 0px 0px 0px 2px #f5c400;*/
+  /*cursor: pointer;*/
+}
+
+.networkNodeIconAlerts
+{
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 24px;
+  left: -10px;
+}
+
+.networkNodeIconAgents
+{
+  /*float: right;*/
+  /*background-size: 800% 100%;*/
+}
+
+.networkNodeIconTransfers
+{
+}
+
+.networkNodeIconFunds
+{
+}
+
+.networkNodeIconMakeTransfer
+{
+}
+
+.networkNodeIconAlerts
+{
+  /*background-color: transparent;*/
+}
+
+.networkNodeIconAgents-active,
+.networkNodeIconTransfers-active,
+.networkNodeIconLocking-active,
+.networkNodeIconFocusing-active,
+.networkNodeIconFreezing-active,
+.networkNodeIconFollowing-active,
+.networkNodeIconDisabled-active
+{
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: none;
+}
+
+.networkNodeIconLocking-active,
+.networkNodeIconFocusing-active,
+.networkNodeIconFreezing-active,
+.networkNodeIconFollowing-active,
+.networkNodeIconDisabled-active
+{
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.networkNodeIconAgents-active
+{
+  background-image: url('../images/item_agent_100px.png');
+}
+
+.networkNodeIconTransfers-active
+{
+  background-image: url('../images/item_transfer_100px.png');
+}
+
+.networkNodeIconFreezing-active
+{
+  background-image: url('../images/item_freezing_16px.png');
+}
+
+.networkNodeIconFollowing-active
+{
+  background-image: url('../images/item_following_16px.png');
+}
+
+.networkNodeIconDisabled-active
+{
+  background-image: url('../images/item_disabled_16px.png');
+}
+
+.networkNodeIconLocking-active
+{
+  background-image: url('../images/item_lockingdown_16px.png');
+}
+
+.networkNodeIconFocusing-active
+{
+  background-image: url('../images/item_focusing_16px.png');
+}
+
+
+.networkNodeIconAlerts-active
+{
+  background-color: transparent;
+  background-image: url('../images/anim_alert.gif');
+  background-size: 100%;
+  display: inline-block;
+  border-radius: 100%;
+  /*border: 1px solid #aaaaff;*/
+}
+
+.networkNodeIcon-count,
+.networkNode-disabled, .networkNode-following,
+.networkNode-freezing, .networkNode-locking,
+.networkNode-focusing
+{
+  background-color: #f5c400;
+  color: #000000;
+  font-family: FollowTheMoneyFont;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  position: absolute;
+  left: 16px;
+  display: inline-block;
+  top: -6px;
+}
+
+.networkNode-transfers, .networkNode-agents
+{
+  display: none;
+}
+
+.networkNode-disabled, .networkNode-following,
+.networkNode-freezing, .networkNode-locking,
+.networkNode-focusing
+{
+  width: 14px;
+  height: 14px;
+  left: -12px;
+  top: 2px;
+}
+
+.chart-balance
+{
+  cursor: default;
+  position: absolute;
+  top: 0px;
+  left: 150%;
+  background: rgba(64,64,64,0.5);
+  border: 2px solid #666666;
+  height: 120%;
+}

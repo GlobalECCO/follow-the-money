@@ -1,0 +1,26 @@
+body {
+  background-color: #4b1200;
+}
+
+@font-face
+{
+  font-family: FollowTheMoneyFont;
+  src: url('fonts/ROCK.TTF');
+}
+
+
+/* Test stuff. remove when done */
+
+.btn 
+{
+  width: 80px;
+  height: 32px;
+  background-color: gray;
+  border: 2px solid black;
+}
+
+.btn:hover
+{
+  cursor: pointer;
+  background-color: lightgray;
+}

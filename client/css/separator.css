@@ -1,0 +1,11 @@
+.separator-vertical
+{
+  position: absolute;
+  background-color: #51a6f4;
+  display: inline-block;
+  width: 2px;
+  height: 90%;
+  margin-left: 10px;
+  margin-right: 5px;
+  box-shadow: 0px 0px 12px 2px #26537C;
+}

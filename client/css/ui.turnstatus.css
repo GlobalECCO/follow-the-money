@@ -1,0 +1,76 @@
+.turnStatus-container
+{
+  position: fixed;
+  right: 0px;
+  top: 76px;
+  padding: 10px;
+}
+
+.turnStatus-calendarPage
+{
+  width: 80px;
+  height: 90px;
+  background-color: #eeeeee;
+  background-image: url('../images/calendar_page.gif');
+  position: relative;
+}
+
+.turnStatus-turnNumber
+{
+  font-family: FollowTheMoneyFont;
+  color: #141414;
+  position: relative;
+  font-size: x-large;
+  text-align: right;
+  width: 100%;
+  padding: 4px;
+  float: right;
+  position: relative;
+}
+
+.turnStatus-turnNumber
+{
+  top: 6px;
+}
+
+.turnStatus-notes
+{
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.turnStatus-notes-01
+{
+  background-image: url('../images/calendar_notes_01.png');
+}
+
+.turnStatus-notes-02
+{
+  background-image: url('../images/calendar_notes_02.png');
+}
+
+.turnStatus-notes-03
+{
+  background-image: url('../images/calendar_notes_03.png');
+}
+
+.turnStatus-notes-04
+{
+  background-image: url('../images/calendar_notes_04.png');
+}
+
+.turnStatus-notes-05
+{
+  background-image: url('../images/calendar_notes_05.png');
+}
+
+.turnStatus-notes-06
+{
+  background-image: url('../images/calendar_notes_06.png');
+}
+
+.turnStatus-notes-07
+{
+  background-image: url('../images/calendar_notes_07.png');
+}

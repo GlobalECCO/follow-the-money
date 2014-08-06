@@ -1,0 +1,252 @@
+.networkLink, .networkLink-tween
+{
+  position: absolute;
+  z-index: 0;
+  webkit-transform: translateZ(0);
+}
+
+.networkLink-line, .networkLink-tween
+{
+  background-color: #51a6f4;
+/*  679fd2;*/
+
+  height: 2px;
+  margin-top: -1px;
+  /*box-shadow: 0px 0px 12px 2px #26537C;*/
+
+  /*-webkit-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*-moz-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*-ms-transition: background-color 0.3s, box-shadow 0.3s;*/
+  /*transition: background-color 0.3s, box-shadow 0.3s;*/
+}
+
+.networkLink-line-slow
+{
+  background-color: transparent;
+  /*height: 4px;*/
+  background-image: url('../images/slow_link.gif');
+  background-repeat: repeat-x;
+}
+
+.networkLink-tween
+{
+  z-index: 2;
+}
+
+.-networkLink-tween-main
+{
+  background-color: #000000;
+  border: 2px solid #51a6f4;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  position: relative;
+  top: -8px;
+}
+
+.networkLink-tween-main
+{
+  background-color: #51a6f4;
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -2px;
+  /*border-radius: 100%;*/
+
+  /*background-size: 100%;*/
+  /*background-image: url('../images/tween_link.gif');*/
+}
+
+.networkLink-tween-highlighted
+{
+  background-color: white;
+}
+
+.networkLink-tween-selected
+{
+  background-color: #FFB040;
+}
+
+.networkLink-tween-darkened
+{
+  -webkit-filter: brightness(0.65);
+  -moz-filter: brightness(0.65);
+  -ms-filter: brightness(0.65);
+  filter: brightness(0.65);
+}
+
+.networkLink-tween-arrow-highlighted
+{
+  border-left: 10px solid white !important;
+}
+
+.networkLink-tween-arrow-selected
+{
+  border-left: 10px solid #FFB040 !important;
+}
+
+/*Links Animations*/
+
+@keyframes pulse-blue
+{
+  0%
+  {
+    background-image: url('../images/network_link_default_glow.png');
+  }
+
+  50%
+    {
+    background-image: url('../images/network_link_highlighted_glow.png');
+  }
+
+  100%
+    {
+    background-image: url('../images/network_link_default_glow.png');
+  }
+}
+
+@-webkit-keyframes pulse-blue
+{
+  0%
+  {
+    background-image: url('../images/network_link_default_glow.png');
+  }
+
+  50%
+    {
+    background-image: url('../images/network_link_highlighted_glow.png');
+    /*top: -22px;*/
+  }
+
+  100%
+    {
+    background-image: url('../images/network_link_default_glow.png');
+  }
+}
+
+
+.networkLinkArrow-left, .networkLinkArrow-right
+{
+  position: absolute;
+  top: 3px;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #51a6f4;
+}
+
+.networkLink-arrow
+{
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #51a6f4;
+}
+
+.networkLinkArrow-left
+{
+  left: 5px;
+}
+
+.networkLinkArrow-right
+{
+  left: 16px;
+}
+
+.networkLink-glow-top, .networkLink-glow-bottom
+{
+  position: absolute;
+  height: 22px;
+  background-image: url('../images/network_link_default_glow.png');
+  background-repeat: repeat-x;
+/*  background-size: 10px 24px;*/
+  background-position: center bottom;
+  width: 100%;
+  top: 0px;
+  z-index: -1000;
+}
+
+.networkLink-glow-bottom
+{
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+  z-index: -2000;
+}
+
+.networkLink-glow-top
+{
+  top: -22px;
+}
+
+.networkLink-line-disabled
+{
+  background-color: #000000;
+}
+
+.networkLink-glow-disabled
+{
+  background-image: url('../images/network_link_disabled_glow.png');
+}
+
+.networkLink-line-highlighted
+{
+  background-color: #ffffff;
+}
+
+.networkLink-glow-highlighted
+{
+  animation-duration: 2s;
+  animation-name: pulse-blue;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: pulse-blue;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.networkLink-line-darkened
+{
+  -webkit-filter: brightness(0.65);
+  -moz-filter: brightness(0.65);
+  -ms-filter: brightness(0.65);
+  filter: brightness(0.65);
+}
+
+.networkLink-glow-darkened
+{
+  -webkit-filter: brightness(0.65);
+  -moz-filter: brightness(0.65);
+  -ms-filter: brightness(0.65);
+  filter: brightness(0.65);
+
+  animation-duration: 2s;
+  animation-name: pulse-gray;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: pulse-gray;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.networkLink-line-selected
+{
+  background-color: #FFB040;
+  z-index: 1;
+  height: 3px;
+}
+
+.networkLink-glow-selected
+{
+  background-image: url('../images/network_link_selected_glow.png');
+}

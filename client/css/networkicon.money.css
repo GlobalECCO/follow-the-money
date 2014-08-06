@@ -1,0 +1,10 @@
+.networkIconMoney
+{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-size: 100%;
+  background-image: url('../images/item_transfer_100px.png');
+  border-radius: 100%;
+  z-index: 3;
+}

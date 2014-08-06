@@ -1,0 +1,434 @@
+.intro-container
+{
+  width: 100%;
+  position: absolute;
+  top: 12%;
+  z-index: 2000;
+}
+
+.intro
+{
+  margin: auto;
+  position: relative;
+  width: 640px;
+  height: 550px;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 0px 0px 12px 2px #ff9500;
+}
+
+.intro-controls
+{
+  width: 680px;
+  background-color: #141414;
+  height: 40px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.intro-button-next, .intro-button-skip
+{
+  display: inline-block;
+  float: right;
+}
+
+.intro-slides
+{
+  width: 100%;
+  height: 81%;
+}
+
+.intro-text
+{
+  margin-top: 6px;
+  width: 100%;
+  font-family: FollowTheMoneyFont;
+  color: white;
+  text-align: left;
+  
+}
+
+.intro-slide
+{
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.intro-state
+{
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+
+  -webkit-animation-duration: 8s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  
+}
+
+.state-slide-01
+{
+  background-image: url('../images/state_slide_01.png');
+  animation-name: pan01;
+  -webkit-animation-name: pan01;
+}
+
+@keyframes pan01
+{
+  0%
+  {
+    background-size: 100%;
+  }
+  
+  100%
+    {
+    background-size: 110%;
+  }
+}
+
+@-webkit-keyframes pan01
+{
+  0%
+  {
+    background-size: 120%;
+  }
+  
+  100%
+    {
+    background-size: 100%;
+  }
+}
+
+.state-slide-02
+{
+  background-image: url('../images/state_slide_02.png');
+  background-size: 120%;
+  background-position: center center;
+  animation-name: pan02;
+  -webkit-animation-name: pan02;
+}
+
+@keyframes pan02
+{
+  0%
+  {
+    background-size: 100%;
+    background-position: right center;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+    background-position: center center;
+  }
+}
+
+@-webkit-keyframes pan02
+{
+  0%
+  {
+    background-size: 100%;
+    background-position: right center;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+    background-position: center center;
+  }
+}
+.state-slide-03
+{
+  background-image: url('../images/state_slide_03.png');
+  
+  background-size: 120%;
+  background-position: center center;
+  animation-name: pan03;
+  -webkit-animation-name: pan03;
+}
+
+@keyframes pan03
+{
+  0%
+  {
+    background-size: 100%;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+  }
+}
+
+@-webkit-keyframes pan03
+{
+  0%
+  {
+    background-size: 100%;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+  }
+}
+
+.state-slide-04
+{
+  background-image: url('../images/state_slide_04.png');
+  
+  background-size: 120%;
+  background-position: left center;
+  animation-name: pan04;
+  -webkit-animation-name: pan04;
+}
+
+@keyframes pan04
+{
+  0%
+  {
+    background-position: right center;
+  }
+  
+  100%
+    {
+    background-position: left center;
+  }
+}
+
+@-webkit-keyframes pan04
+{
+  0%
+  {
+    background-position: right center;
+  }
+  
+  100%
+    {
+    background-position: left center;
+  }
+}
+
+
+.state-slide-05
+{
+  background-image: url('../images/state_slide_05.png');
+  
+  background-size: 100%;
+  background-position: center center;
+  animation-name: pan05;
+  -webkit-animation-name: pan05;
+}
+
+@keyframes pan05
+{
+  0%
+  {
+    background-size: 120%;
+    background-position: center top;
+  }
+  
+  100%
+    {
+    background-size: 100%;
+    background-position: center center;
+  }
+}
+
+@-webkit-keyframes pan05
+{
+  0%
+  {
+    background-size: 120%;
+    background-position: center top;
+  }
+  
+  100%
+    {
+    background-size: 100%;
+    background-position: center center;
+  }
+}
+
+
+.state-slide-06
+{
+  background-image: url('../images/state_slide_06.png');
+  
+  background-size: 120%;
+  background-position: center center;
+  animation-name: pan06;
+  -webkit-animation-name: pan06;
+}
+
+@keyframes pan06
+{
+  0%
+  {
+    background-size: 120%;
+    background-position: center bottom;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+    background-position: center center;
+  }
+}
+
+@-webkit-keyframes pan06
+{
+  0%
+  {
+    background-size: 120%;
+    background-position: center bottom;
+  }
+  
+  100%
+    {
+    background-size: 120%;
+    background-position: center center;
+  }
+}
+
+
+.state-slide-07
+{
+  background-image: url('../images/state_slide_07.png');
+  
+  background-size: 130%;
+  background-position: center center;
+  animation-name: pan07;
+  -webkit-animation-name: pan07;
+}
+
+@keyframes pan07
+{
+  0%
+  {
+    background-size: 100%;
+    background-position: left bottom;
+  }
+  
+  100%
+    {
+    background-size: 130%;
+    background-position: center center;
+  }
+}
+
+@-webkit-keyframes pan07
+{
+  0%
+  {
+    background-size: 100%;
+    background-position: left bottom;
+  }
+  
+  100%
+    {
+    background-size: 130%;
+    background-position: center center;
+  }
+}
+
+
+.state-slide-08
+{
+  background-image: url('../images/state_slide_08.png');
+  
+  background-size: 120%;
+  background-position: left center;
+  animation-name: pan08;
+  -webkit-animation-name: pan08;
+}
+
+@keyframes pan08
+{
+  0%
+    {
+    background-size: 100%;
+    background-position: center center;
+  }
+  
+  100%
+  {
+    background-size: 120%;
+    background-position: left center;
+  }
+}
+
+@-webkit-keyframes pan08
+{
+  0%
+    {
+    background-size: 100%;
+    background-position: center center;
+  }
+  
+  100%
+  {
+    background-size: 120%;
+    background-position: left center;
+  }
+}
+
+
+.state-slide-09
+{
+  background-image: url('../images/state_slide_09.png');
+  
+  background-size: 120%;
+  animation-name: pan09;
+  -webkit-animation-name: pan09;
+}
+
+@keyframes pan09
+{
+  0%
+    {
+    background-size: 100%;
+  }
+  
+  100%
+  {
+    background-size: 120%;
+  }
+}
+
+@-webkit-keyframes pan09
+{
+  0%
+    {
+    background-size: 100%;
+  }
+  
+  100%
+  {
+    background-size: 120%;
+  }
+}
+
+
+.terrorist-slide-01
+{
+  background-image: url('../images/terrorist_slide_01.png');
+}
+
+.terrorist-slide-02
+{
+  background-image: url('../images/terrorist_slide_02.png');
+}
+
+.terrorist-slide-03
+{
+  background-image: url('../images/terrorist_slide_03.png');
+}
+
+.terrorist-slide-04
+{
+  background-image: url('../images/terrorist_slide_04.png');
+}

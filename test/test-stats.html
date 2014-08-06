@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Statistic Test</title>
+    <script type="text/javascript">
+
+      // Edit values here to change the stats we perform.
+      var COUNT = 3;                // Total count of transfers to test
+      var FAKE_CHANCE = 0.70;       // The chances of a fake transfer appearing.
+      var ITERATIONS = 1000000;     // Total number of iterations to perform the test.
+
+      window.onload = function() {
+        var elem = document.getElementById("TransactionCount");
+        elem.value = COUNT;
+        elem = document.getElementById("FakeChance");
+        elem.value = FAKE_CHANCE;
+        elem = document.getElementById("Iterations");
+        elem.value = ITERATIONS;
+      }
+
+      function onSubmit() {
+        var calcText = document.getElementById("calculating");
+        calcText.innerHTML = "Calculating...";
+        setTimeout(function() {
+          var elem = document.getElementById("TransactionCount");
+          COUNT = elem.value;
+          elem = document.getElementById("FakeChance");
+          FAKE_CHANCE = elem.value;
+          elem = document.getElementById("Iterations");
+          ITERATIONS = elem.value;
+          calculate();
+          calcText.innerHTML = "";
+        }, 100);
+      }
+
+      function calculate() {
+        // These values our the results after the program has run.
+        var fakesFound = 0;
+        var realsFound = 0;
+        var binsFound  = [0, 0, 0, 0];
+        var resultBinsFound = [0, 0, 0, 0];
+        var numPicked = [];
+
+        for (var numPicks = 0; numPicks < COUNT; ++numPicks) {
+          var realsPicked = [];
+          for (var realPicks = 0; realPicks <= numPicked.length + 1; ++realPicks) {
+            realsPicked.push(0);
+          }
+          numPicked.push(realsPicked);
+        }
+
+        // Calculate a table that expresses the chances of creating a certain amount
+        // of fake transfers, each index in the table represents the chances of
+        // getting that many fake transfers.
+        var notFakeChance = (1.0 - FAKE_CHANCE);
+        var chanceTable = [notFakeChance * notFakeChance * notFakeChance,
+                           notFakeChance * notFakeChance * FAKE_CHANCE + notFakeChance * notFakeChance * FAKE_CHANCE + notFakeChance * notFakeChance * FAKE_CHANCE,
+                           notFakeChance * FAKE_CHANCE * FAKE_CHANCE + notFakeChance * FAKE_CHANCE * FAKE_CHANCE + notFakeChance * FAKE_CHANCE * FAKE_CHANCE,
+                           FAKE_CHANCE * FAKE_CHANCE * FAKE_CHANCE];
+
+        // Based on our desired transfer count, calculate our total chance range
+        // between 0-1 of getting each of the possible combinations of real and
+        // fake transfers and put them into a table of ranges.
+        var chanceTotal = 0;
+        var chanceCount = COUNT;
+        if (chanceCount > chanceTable.length - 1) {
+          chanceCount = chanceTable.length - 1;
+        }
+        for (var index = 0; index <= chanceCount; ++index) {
+          chanceTotal += chanceTable[index];
+        }
+
+        var chanceRanges = [];
+        for (var index = 0; index <= chanceCount; ++index) {
+          var cur = 0;
+          if (index > 0) {
+            cur = chanceRanges[index - 1];
+          }
+          chanceRanges.push(cur + (chanceTable[index] / chanceTotal));
+        }
+
+        var elem = document.getElementById("input");
+        elem.innerHTML = "COUNT: " + COUNT + "<br>FAKE_CHANCE: " + FAKE_CHANCE + "<br>SAMPLES: " + ITERATIONS;
+
+        // Perform our main iterations.
+        for (var iteration = 0; iteration < ITERATIONS; ++iteration) {
+
+          // Retrieve a random number from 0-1, then find out, based
+          // on our previous range calculations, how many fake entries
+          // are generated this round.
+          var random = Math.random();
+          var fakeCount = 0;
+          for (fakeCount = 0; fakeCount < chanceTable.length; ++fakeCount) {
+            if (random < chanceRanges[fakeCount]) {
+              break;
+            }
+          }
+
+          if (fakeCount < chanceRanges.length) {
+            var transfers = [];
+
+            binsFound[fakeCount]++;
+
+            // Create our fake entries.
+            for (var fakeIndex = 0; fakeIndex < fakeCount; ++fakeIndex) {
+              transfers.push(false);
+            }
+
+            // Now fill the rest of the empty entries with real entries.
+            for (var realIndex = transfers.length; realIndex < COUNT; ++realIndex) {
+              transfers.push(true);
+            }
+
+            // Now iterate the total amount of picks performed.
+            var min = 0;
+            for (var pickNum = 1; pickNum <= numPicked.length; ++pickNum) {
+              var unpickedTransfers = JSON.parse(JSON.stringify(transfers));
+
+              var realsPicked = 0;
+              for (var pickIndex = 0; pickIndex < pickNum; ++pickIndex) {
+                var max = unpickedTransfers.length - 1;
+                random = Math.floor(Math.random() * (max - min + 1) + min);
+                if (unpickedTransfers[random] === true) {
+                  if (pickNum === 1) {
+                    realsFound++;
+                    resultBinsFound[fakeCount]++;
+                  }
+
+                  realsPicked++;
+                } else if (pickNum === 1) {
+                  fakesFound++;
+                }
+                unpickedTransfers.splice(random, 1);
+              }
+
+              numPicked[pickNum-1][realsPicked]++;
+            }
+          }
+        }
+
+        // After we have finished our iterations, draw the results into the page.
+        elem = document.getElementById("results");
+        elem.innerHTML = "RESULTS<br>Reals found: &nbsp" + realsFound + "<br>Fakes found: " + fakesFound + "<br>Real percent: " + realsFound / ITERATIONS * 100 + "%";
+
+        elem = document.getElementById("bins");
+        elem.innerHTML = "BIN COUNT<br>0 Fakes: " + binsFound[0] + " (" + binsFound[0] / ITERATIONS * 100 + "%)<br>" +
+                                      "1 Fakes: " + binsFound[1] + " (" + binsFound[1] / ITERATIONS * 100 + "%)<br>" +
+                                      "2 Fakes: " + binsFound[2] + " (" + binsFound[2] / ITERATIONS * 100 + "%)<br>" + 
+                                      "3 Fakes: " + binsFound[3] + " (" + binsFound[3] / ITERATIONS * 100 + "%)";
+
+        elem = document.getElementById("resultBins");
+        var resultBinsTotal = 0;
+        for (var resultBin = 0; resultBin < resultBinsFound.length; ++resultBin) {
+          resultBinsTotal += resultBinsFound[resultBin];
+        }
+        elem.innerHTML = "REAL BIN COUNT<br>0 Fakes: " + resultBinsFound[0] + " (" + resultBinsFound[0] / binsFound[0] + "%, t" + resultBinsFound[0] / ITERATIONS * 100 + "%)<br>" +
+                                           "1 Fakes: " + resultBinsFound[1] + " (" + resultBinsFound[1] / binsFound[1] + "%, t" + resultBinsFound[1] / ITERATIONS * 100 + "%)<br>" +
+                                           "2 Fakes: " + resultBinsFound[2] + " (" + resultBinsFound[2] / binsFound[2] + "%, t" + resultBinsFound[2] / ITERATIONS * 100 + "%)<br>" +
+                                           "3 Fakes: " + resultBinsFound[3] + " (" + resultBinsFound[3] / binsFound[3] + "%, t" + resultBinsFound[3] / ITERATIONS * 100 + "%)";
+
+        elem = document.getElementById("numPicked");
+        elem.innerHTML = "AT LEAST # REALS PICKED<br>";
+
+        var realsTotal = [];
+        for (var pickNum = 0; pickNum < numPicked.length; ++pickNum) {
+          realsTotal.push(0);
+          for (var realPicks = 0; realPicks < numPicked[pickNum].length; ++realPicks) {
+            realsTotal[pickNum] += numPicked[pickNum][realPicks];
+          }
+        }
+
+        numPickedTotals = [];
+        for (var pickNum = 0; pickNum < numPicked.length; ++pickNum) {
+          var realsTotal = [];
+          for (var realPicks = 0; realPicks < numPicked[pickNum].length; ++realPicks) {
+            realsTotal.push(numPicked[pickNum][realPicks]);
+            for (var subRealPicks = realPicks+1; subRealPicks < numPicked[pickNum].length; ++subRealPicks) {
+              realsTotal[realPicks] += numPicked[pickNum][subRealPicks];
+            }
+          }
+          numPickedTotals.push(realsTotal);
+        }
+
+        for (var pickNum = 0; pickNum < numPicked.length; ++pickNum) {
+          elem.innerHTML += (pickNum + 1) + " Picked:<br>";
+          for (var realPicks = 0; realPicks < numPicked[pickNum].length; ++realPicks) {
+            elem.innerHTML += "  > " + realPicks + " Reals: " + numPicked[pickNum][realPicks] + " (" + numPickedTotals[pickNum][realPicks] / ITERATIONS * 100 + "%)<br>";
+          }
+        }
+      }
+    </script>
+	</head>
+	<body>
+    <input type="number" id="TransactionCount"/>Transaction Count
+    <br>
+    <input type="number" id="FakeChance"/>Chance of Fake
+    <br>
+    <input type="number" id="Iterations"/>Samples
+    <br>
+    <button onclick="onSubmit()">Calculate</button>
+    <span id="calculating" style="background-color: red"></span>
+    <br><br>
+    <span id="input"></span>
+    <br><br>
+    <span id="results"></span>
+    <br><br>
+    <span id="bins"></span>
+    <br><br>
+    <span id="resultBins"></span>
+    <br><br>
+    <span id="numPicked"></span>
+	</body>
+</html>

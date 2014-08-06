@@ -1,0 +1,13 @@
+SoundBible.com
+  pop_clip_in.mp3
+  click.mp3
+
+DanoSongs.com
+  danosongs.com-bookofthemonkey.mp3
+
+freesound.org
+  cha-ching.wav
+  collecting-coins.mp3
+  chatAlert.mp3
+  whoosh.mp3
+  other-player-submitted-turn.mp3

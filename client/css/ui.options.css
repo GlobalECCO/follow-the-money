@@ -1,0 +1,51 @@
+.optionsPanel
+{
+  background-color: transparent;
+  padding: 4px;
+  position: fixed;
+  right: 4px;
+  bottom: 26px;
+}
+
+.optionsPanel-option
+{
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin: 2px;
+  margin-bottom: -20px;
+  background-size: 14px 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 4px;
+}
+
+.option-soundToggle
+{
+  background-image: url('../images/options_icon_music_toggle_on.png');
+}
+
+.option-toolTipToggle
+{
+  background-image: url('../images/options_icon_tooltip_toggle_on.png');
+}
+
+.option-adviceToggle
+{
+  background-image: url('../images/options_icon_advice_toggle_on.png');
+}
+
+.option-soundToggle-disabled
+{
+  background-image: url('../images/options_icon_music_toggle_off.png');
+}
+
+.option-toolTipToggle-disabled
+{
+  background-image: url('../images/options_icon_tooltip_toggle_off.png');
+}
+
+.option-adviceToggle-disabled
+{
+  background-image: url('../images/options_icon_advice_toggle_off.png');
+}

@@ -1,0 +1,195 @@
+.notifications-container
+{
+  background-color: transparent;
+  width: 30%;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 8px;
+  position: relative;
+  left: 0%;
+}
+
+.notifications-icon
+{
+  width: 25px;
+  height: 25px;
+  /*background-color: #141414;*/
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  margin: 8px;
+  position: relative;
+}
+
+.dollar-value, .count-value
+{
+  font-family: FollowTheMoneyFont;
+  text-align: center;
+  position: relative;
+  cursor: default;
+}
+
+.dollar-value
+{
+  font-size: x-small;
+  color: #f5c400;
+  width: 160%;
+  left: -30%;
+  top: 15px;
+  bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.count-value
+{
+  background-color: #f5c400;
+  color: black;
+  font-size: x-small;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  padding: 2px;
+  left: 20px;
+  top: -3px;
+}
+
+.notifications-icon-image-terrorist
+{
+  background-image: url('../images/notification_icon_terrorist.png');
+  /*background-size: 35px 35px;*/
+  /*background-position: center 0px;*/
+  /*margin-top: -5px;*/
+  position: relative;
+  top: -2px;
+}
+
+.notifications-icon-image-terrorist-poor
+{
+  animation-duration: 2s;
+  animation-name: anim-poorTerrorist;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 2s;
+  -webkit-animation-name: anim-poorTerrorist;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.notifications-icon-image-bank
+{
+  background-image: url('../images/node_bank_100px.png');
+}
+
+.notifications-icon-image-hawala
+{
+  background-image: url('../images/node_hawala_100px.png');
+}
+
+.notifications-icon-image-link
+{
+  background-image: url('../images/networklink_notification_icon.png');
+}
+
+.notifications-icon-image-icecube
+{
+  background-image: url('../images/agent_status_frozen_50px.png');
+}
+
+.notifications-icon-image-transfers
+{
+  background-image: url('../images/item_transfer_100px.png');
+  border-radius: 100%;
+}
+
+
+@keyframes anim-poorTerrorist
+{
+  0%
+  {
+    background-image: url('../images/notification_icon_terrorist.png');
+  }
+
+  50%
+    {
+    background-image: url('../images/notification_icon_terrorist_broke.png');
+  }
+
+  100%
+    {
+    background-image: url('../images/notification_icon_terrorist.png');
+  }
+}
+
+@-webkit-keyframes anim-poorTerrorist
+{
+  0%
+  {
+    background-image: url('../images/notification_icon_terrorist.png');
+  }
+
+  50%
+    {
+    background-image: url('../images/notification_icon_terrorist_broke.png');
+    /*top: -22px;*/
+  }
+
+  100%
+    {
+    background-image: url('../images/notification_icon_terrorist.png');
+  }
+}
+
+.notifications-icon-sub
+{
+  background-color: #000000;
+  width: 10px;
+  height: 10px;
+  background-size: 12px 12px;
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 2px;
+  border-radius: 100%;
+  border: 2px solid #51a6f4;
+  position: absolute;
+  left: -4px;
+}
+
+.notifications-icon-followed
+{
+  background-image: url('../images/item_following_16px.png');
+}
+
+.notifications-icon-spotted
+{
+  background-image: url('../images/item_focusing_16px.png');
+}
+
+.notification-alert-animation
+{
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 42px;
+  height: 40px;
+  left: -6px;
+  top: -3px;
+  background-color: #0a0a0a;
+}
+
+.notification-alert-animation-image
+{
+  /*background-color: #0a0a0a;*/
+/*  background-image: url('../images/notification_alert_animation.gif');*/
+}
+
+.notifications-icon-mask
+{
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

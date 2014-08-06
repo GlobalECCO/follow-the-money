@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <meta name="version" content="VER_1_2">
+  <title>Follow The Money</title>
+
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+
+  <!-- Stylesheets -->
+  <link rel='stylesheet' type='text/css' href='css/common.css'/>
+  <link rel='stylesheet' type='text/css' href='css/credits.css'/>
+  <link rel='stylesheet' type='text/css' href='css/end_game.css'/>
+  <link rel='stylesheet' type='text/css' href='css/main_layout.css'/>
+  <link rel='stylesheet' type='text/css' href='css/networknodes.css'/>
+  <link rel='stylesheet' type='text/css' href='css/networklinks.css'/>
+  <link rel='stylesheet' type='text/css' href='css/networkicon.money.css'/>
+  <link rel='stylesheet' type='text/css' href='css/playercard.css'/>
+  <link rel='stylesheet' type='text/css' href='css/separator.css'/>
+  <link rel='stylesheet' type='text/css' href='css/submenu.maketransfer.css'/>
+  <link rel='stylesheet' type='text/css' href='css/submenu.playercardview.css'/>
+  <link rel='stylesheet' type='text/css' href='css/submenu.nodeview.css'/>
+  <link rel='stylesheet' type='text/css' href='css/submenu.transfers.css'/>
+  <link rel='stylesheet' type='text/css' href='css/submit_container.css'/>
+  <link rel='stylesheet' type='text/css' href='css/waiting_container.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.infopanel.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.terrorist.hud.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.state.hud.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.pendingtransactions.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.playback.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.options.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.chat.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.playerstatus.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.notifications.css'/>
+  <link rel='stylesheet' type='text/css' href='css/ui.intro.css'/>
+  <link rel='stylesheet' type='text/css' href='css/tutorial.css'/>
+  <link rel='stylesheet' type='text/css' href='opentip.css'/>
+  <link rel='stylesheet' type='text/css' href='jquery.jscrollpane.css'/>
+  <link rel='stylesheet' type='text/css' href='jquery-ui-1.10.4.min.css'/>
+
+  <!-- http://stackoverflow.com/questions/5265202/do-you-need-text-javascript-specified-in-your-script-tags -->
+
+  <!-- Third Party Libraries -->
+  <script src='underscore-min.js'></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src='kernel.js'></script>
+  <script src='jquery-2.1.0.min.js'></script>
+  <script src='jquery-ui-1.10.4.min.js'></script>
+  <script src='kernel.extension.js'></script>
+  <script src='howler.js'></script>
+  <script src='jquery.jscrollpane.min.js'></script>
+  <script src='jquery.mousewheel.js'></script>
+  <script src='jquery.spritely.js'></script>
+  <script src='opentip-native.js'></script>
+  <script src='raphael-min.js'></script>
+  <script src='g.raphael-min.js'></script>
+  <script src='g.line.js'></script>
+
+  <!-- Shared logic -->
+  <script src='agent_status.js'></script>
+  <script src='balance_values.js'></script>
+  <script src='game_end_reasons.js'></script>
+  <script src='game_phase.js'></script>
+  <script src='money_status.js'></script>
+  <script src='node_types.js'></script>
+  <script src='player_roles.js'></script>
+  <script src='util_functions.js'></script>
+  <script src='tooltips.shared.js'></script>
+
+  <!-- Core client logic -->
+  <script src='kernel.hub.game.js'></script>
+  <script src='kernel.hub.main.js'></script>
+  <script src='chat_socket.js'></script>
+  <script src='config.js'></script>
+  <script src='dataflow.js'></script>
+  <script src='module_loader.js'></script>
+  <script src='ui.util.js'></script>
+  <script src='ui.charting.js'></script>
+
+</head>
+<body>
+  <div id="whichPlayer"></div>
+  <div class='top-bar'></div>
+  <div class='middle-bar'>
+    <div id='menu-root' class='network-level'></div>
+  </div>
+  <div class='bottom-bar'>
+  </div>
+</body>
+</html>

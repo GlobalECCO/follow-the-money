@@ -1,0 +1,97 @@
+.makeTransferContainer
+{
+  width: 360px;
+  height: 180px;
+  background-color: #000000;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: 4;
+  padding: 8px;
+  box-shadow: 0px 0px 14px 0px #ff9500;
+}
+
+.makeTransferHeading
+{
+  font-family: FollowTheMoneyFontBold;
+  font-size: 20px;
+  /*font-weight: bold;*/
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.makeTransferLineItems
+{
+  width: 100%;
+  float: left;
+}
+
+.makeTransferLineItem
+{
+  color: #dddddd;
+  font-family: FollowTheMoneyFont;
+  font-size: 12px;
+  display: block;
+  width: 80%;
+  height: 18px;
+  padding-top: 4px;
+}
+
+.makeTransferLineItem-description, .makeTransferLineItem-value
+{
+  display: inline-block;
+  position: relative;
+}
+
+.makeTransferLineItem-description
+{
+  float: left;
+  margin-left: 4px;
+}
+
+.makeTransferLineItem-value
+{
+  float: right;
+  margin-right: 4px;
+}
+
+.makeTransferLineItem-button
+{
+  width: 14px;
+  height: 14px;
+  background-color: #a61d00;
+  text-align: center;
+  display: inline-block;
+}
+
+.makeTransferLineItem-buttonLess, .makeTransferLineItem-buttonMore
+{
+  width: 14px;
+  height: 14px;
+  /*background-color: #a61d00;*/
+  position: relative;
+  left: 70px;
+  top: 0px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0px;
+  margin: 0px;
+}
+
+.makeTransferAmount
+{
+  background-color: #141414;
+}
+
+.makeTransferFees
+{
+  color: #a61d00;
+}
+
+.makeTransferSubmitButton
+{
+  position: absolute;
+  left:1%;
+  bottom: 1%;
+}

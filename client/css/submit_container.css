@@ -1,0 +1,15 @@
+.submitContainer
+{
+  position: fixed;
+  padding: 4px;
+  right: 0px;
+  bottom: 50px;
+}
+
+.cancelButton {
+  float: left;
+}
+
+.submitButton {
+  float: right;
+}

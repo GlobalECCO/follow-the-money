@@ -1,0 +1,635 @@
+.playerStatus
+{
+  position: fixed;
+  padding: 8px;
+  right: 8px;
+  top: 60px;
+}
+
+.playerStatus-terrorist, .playerStatus-state
+{
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.playerStatus-state-icon, .playerStatus-terrorist-icon
+{
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.playerStatus-state-icon
+{
+  background-image: url('../images/portrait_blue_agent_01_100px.png');
+}
+
+.playerStatus-terrorist-icon
+{
+  background-image: url('../images/full_body_silhouette_leader01.png');
+}
+
+.playerStatus-done
+{
+  opacity: 0.5;
+}
+
+.playerStatus-status-waiting-animation
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  
+  left: -5px;
+  top: -5px;
+  
+  animation-duration: 1s;
+  animation-name: WaitingRingRotate;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: WaitingRingRotate;
+  -webkit-animation-iteration-count: infinite;
+  
+}
+
+.playerStatus-status-playing-animation
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.playerStatus-playing
+{
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.first-dot
+{
+  left: 27px;
+  top: 2px;
+  width: 1px;
+  height: 1px;
+  
+  animation-name: StillPlaying1;
+  -webkit-animation-name: StillPlaying1;
+    
+  -animation-delay: 0.0s;  
+  --moz-animation-delay: 0.0s;  
+  --webkit-animation-delay: 0.0s;  
+  
+}
+
+.second-dot
+{
+  left: 31px;
+  top: 3px;
+  width: 2px;
+  height: 2px;
+  
+  animation-name: StillPlaying2;
+  -webkit-animation-name: StillPlaying2;
+  
+  -animation-delay: 0.3s; /* W3C and Opera */
+  --moz-animation-delay: 0.3s; /* Firefox */
+  --webkit-animation-delay: 0.3s; /* Safari and Chrome */
+}
+
+.third-dot
+{
+  left: 34px;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  
+  animation-name: StillPlaying3;
+  -webkit-animation-name: StillPlaying3;
+  
+  -animation-delay: 0.7s; /* W3C and Opera */
+  --moz-animation-delay: 0.7s; /* Firefox */
+  --webkit-animation-delay: 0.7s; /* Safari and Chrome */
+}
+
+.fourth-dot
+{
+  left: 33px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+    
+  animation-name: StillPlaying4;
+  -webkit-animation-name: StillPlaying4;
+  
+  -animation-delay: 1s; /* W3C and Opera */
+  --moz-animation-delay: 1s; /* Firefox */
+  --webkit-animation-delay: 1s; /* Safari and Chrome */
+}
+
+.first-dot,
+.second-dot,
+.third-dot,
+.fourth-dot
+{
+  opacity: 0;
+  animation-duration: 2s;
+/*  animation-name: StillPlaying;*/
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 2s;
+  /*-webkit-animation-name: StillPlaying;*/
+  -webkit-animation-iteration-count: infinite;
+}
+
+.playerStatus-waiting 
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: rgba(255,255,255,0.3);
+  border-left-color: rgba(255,255,255,0.2);
+  border-bottom-color: rgba(255,255,255,0.1);
+  border-right-color: rgba(255,255,255,0.0);
+  
+  left: -5px;
+  top: -5px;
+}
+
+.playerStatus-offset
+{
+  -transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+}
+
+.playerStatus-hidden
+{
+  visibility: hidden;
+}
+
+/****************************************************************/
+/************ ANIMATION *****************************************/
+/****************************************************************/
+
+@keyframes WaitingRingRotate
+{
+  0%
+  {
+    -transform: rotateZ(0deg);
+  }
+  /*********/
+  12%
+    {
+    -transform: rotateZ(0deg);
+  }
+  
+  13%
+    {
+    -transform: rotateZ(45deg);
+  }
+  /*********/
+  25%
+    {
+    -transform: rotateZ(45deg);
+  }
+  26%
+    {
+    -transform: rotateZ(90deg);
+  }
+  
+  /*********/
+  37%
+    { 
+    -transform: rotateZ(90deg);
+  }
+  
+  38%
+    {
+    -transform: rotateZ(135deg);
+  }
+  
+  /*********/
+  50%
+    { 
+    -transform: rotateZ(135deg);
+  }
+  
+  51%
+    {
+    -transform: rotateZ(180deg);
+  }
+  
+  /*********/
+  62%
+    { 
+    -transform: rotateZ(180deg);
+  }
+  
+  63%
+    {
+    -transform: rotateZ(225deg);
+  }
+
+  /*********/
+  75%
+    { 
+    -transform: rotateZ(225deg);
+  }
+  
+  76%
+    {
+    -transform: rotateZ(270deg);
+  }
+  
+  /*********/
+  87%
+    { 
+    -transform: rotateZ(270deg);
+  }
+  
+  88%
+    {
+    -transform: rotateZ(315deg);
+  }
+  
+  /*********/
+  100%
+    {
+    -transform: rotateZ(315deg);
+  }
+}
+
+@-webkit-keyframes WaitingRingRotate
+{
+  0%
+  {
+    -webkit-transform: rotateZ(0deg);
+  }
+  /*********/
+  12%
+    {
+    -webkit-transform: rotateZ(0deg);
+  }
+  
+  13%
+    {
+    -webkit-transform: rotateZ(45deg);
+  }
+  /*********/
+  25%
+    {
+    -webkit-transform: rotateZ(45deg);
+  }
+  26%
+    {
+    -webkit-transform: rotateZ(90deg);
+  }
+  
+  /*********/
+  37%
+    { 
+    -webkit-transform: rotateZ(90deg);
+  }
+  
+  38%
+    {
+    -webkit-transform: rotateZ(135deg);
+  }
+  
+  /*********/
+  50%
+    { 
+    -webkit-transform: rotateZ(135deg);
+  }
+  
+  51%
+    {
+    -webkit-transform: rotateZ(180deg);
+  }
+  
+  /*********/
+  62%
+    { 
+    -webkit-transform: rotateZ(180deg);
+  }
+  
+  63%
+    {
+    -webkit-transform: rotateZ(225deg);
+  }
+
+  /*********/
+  75%
+    { 
+    -webkit-transform: rotateZ(225deg);
+  }
+  
+  76%
+    {
+    -webkit-transform: rotateZ(270deg);
+  }
+  
+  /*********/
+  87%
+    { 
+    -webkit-transform: rotateZ(270deg);
+  }
+  
+  88%
+    {
+    -webkit-transform: rotateZ(315deg);
+  }
+  
+  /*********/
+  100%
+    {
+    -webkit-transform: rotateZ(315deg);
+  }
+}
+
+/*************************************************************************/
+
+@keyframes StillPlaying
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  90%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes StillPlaying
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  90%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 0;
+  }
+  
+}
+
+/*************************************************************************/
+
+@keyframes StillPlaying1
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  20%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes StillPlaying1
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  20%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+  
+}
+
+/*************************************************************************/
+
+@keyframes StillPlaying2
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  20%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes StillPlaying2
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  20%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+  
+}
+
+/*************************************************************************/
+
+@keyframes StillPlaying3
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  60%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes StillPlaying3
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  40%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  60%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+  
+}
+
+/*************************************************************************/
+
+@keyframes StillPlaying4
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  60%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  80%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes StillPlaying4
+{
+  0%
+  {
+    /*box-shadow: 0px 0px 0px 10px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  60%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 0;
+  }
+  
+  80%
+    {
+    /*box-shadow: 0px 0px 0px 0px #141414 inset;*/
+    opacity: 1;
+  }
+  
+  100%
+    {
+    opacity: 1;
+  }
+  
+}

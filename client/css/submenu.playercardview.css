@@ -1,0 +1,390 @@
+.playerCardViewContainer
+{
+  width: 300px;
+  min-height: 200px;
+  background-color: #000000;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: 4;
+  padding: 8px;
+  /*border: 2px solid #ff9500;*/
+  box-shadow: 0px 0px 14px 0px #ff9500;
+
+/*this doesn't work on terrorist menus*/
+
+  animation-duration: 1s;
+  animation-name: popIn;
+  animation-iteration-count: 1;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: popIn;
+  -webkit-animation-iteration-count: 1;
+}
+
+.playerCardViewContainer-terrorist
+{
+  min-height: 160px;
+}
+
+@keyframes popIn
+{
+  0%
+  {
+    opacity: 0.0;
+  }
+  100%
+  {
+    opacity: 1.0;
+ }
+}
+
+@-webkit-keyframes popIn
+{
+  0%
+  {
+    opacity: 0.0;
+  }
+  100%
+  {
+    opacity: 1.0;
+ }
+}
+
+.playerCardViewHeading
+{
+  position: relative;
+  font-family: FollowTheMoneyFontBold;
+  font-size: 20px;
+  /*font-weight: bold;*/
+  color: #dddddd;
+  margin-bottom: 8px;
+}
+
+.align-left
+{
+  text-align: left;
+}
+
+.align-right
+{
+  text-align: right;
+}
+
+.playerCardViewHeading-Funder
+{
+  float: right;
+}
+
+.playerCardSubHeadingContainer
+{
+  display: inline-block;
+}
+
+.playerCardViewSubHeading, .playerCardViewMaintenanceCostHeader, .playerCardViewFundingProgressHeader
+{
+  position: relative;
+  font-family: FollowTheMoneyFont;
+  font-size: 10px;
+  color: #bbbbbb;
+  height: 40%;
+  width: 100%;
+}
+
+.playerCardViewMaintenanceCostHeader, .playerCardViewFundingProgressHeader
+{
+  font-size: 12px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.playerCardViewSubHeadingAlt
+{
+  color: #bbbbbb;
+}
+
+.playerCardViewMeterSection
+{
+  position: absolute;
+/*  margin-top: 80px;*/
+  bottom: 12px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playerCardViewFundingProgressContainer
+{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.playerCardViewFundingProgressMeter, .playerCardViewMaintenanceCostMeter, .playerCardViewFundingProgressMeterFill
+{
+  height: 6px;
+  background-color: #141414;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.playerCardViewFundingProgressMeterFill
+{
+  background-color: #FF2C00;
+  display: block;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+}
+
+.playerCardViewFundingProgressMeterText, .playerCardViewFundingProgressLabelRight, .playerCardViewFundingProgressLabelLeft, .playerCardViewMaintenanceCostLabelLeft, .playerCardViewMaintenanceCostLabelRight
+{
+  text-align: center;
+  font-family: FollowTheMoneyFont;
+  font-size: 10px;
+  color: #ffffff;
+  height: 16px;
+}
+
+.playerCardViewMaintenanceCostLabelLeft, .playerCardViewMaintenanceCostLabelRight
+{
+  color: #000000;
+}
+
+.playerCardViewSubHeading-Reserves
+{
+  color: #ffffff;
+  background: #51a6f4;
+  width: 50%;
+  height: 14px;
+  padding: 3px;
+  margin-top: 4px;
+}
+
+.playerCardViewSubHeading-Reserves-full
+{
+  background: #f5c400;
+}
+
+.playerCardViewSubHeading-Reserves-critical
+{
+  background: #a61d00;
+  color: #ffffff;
+}
+
+.playerCardViewFundingProgressMeterText
+{
+
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 8px;
+}
+
+.playerCardViewFundingProgressLabelRight, .playerCardViewFundingProgressLabelLeft, .playerCardViewMaintenanceCostLabelLeft, .playerCardViewMaintenanceCostLabelRight
+{
+  width: 30%;
+  display: inline-block;
+  position: relative;
+}
+
+.playerCardViewFundingProgressLabelRight, .playerCardViewMaintenanceCostLabelRight
+{
+  float: right;
+  text-align: right;
+}
+
+.playerCardViewFundingProgressLabelLeft, .playerCardViewMaintenanceCostLabelLeft
+{
+  float: left;
+  text-align: left;
+}
+
+.playerCardViewMaintenanceSegment
+{
+  box-shadow: 0px 0px 0px 1px #141414 inset;
+  height: 100%;
+  display: inline-block;
+  background-color: #141414;
+  position: relative;
+  top: -8px;
+}
+
+.playerCardViewMaintenanceSegment-critical
+{
+  /*background-color: #f5c400;*/
+  animation-duration: 1s;
+  animation-name: critical-pulse;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: critical-pulse;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.playerCardViewMaintenanceSegment-full
+{
+  background-color: #f5c400;
+}
+
+.playerCardViewMaintenanceSegment-credit
+{
+  background-color: #51a6f4;
+}
+
+.playerCardButton
+{
+  display: inline-block;
+  position:relative;
+  float: right;
+  clear: both;
+  /*top:0%;*/
+  /*left:0%;*/
+}
+
+.playerCardButton-accuse
+{
+  float: left;
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 20px;
+  font-size: small;
+  margin-top: -4px;
+}
+
+.playerCard-accuse-Warning-hidden
+{
+  display: none;
+}
+
+.playerCard-accuse-Warning
+{
+  display: inline-block;
+  font-family: FollowTheMoneyFont;
+  font-size: 12px;
+  color: #dddddd;
+  text-align: left;
+  width: 45%;
+  position: relative;
+  top: -4px;
+}
+
+.-playerCard-accuse-Warning:after
+{
+  content: 'WARNING: This will end the game.';
+}
+
+.accuse-warning-animation
+{
+  animation-name: AccuseWarningFlash;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  
+  -webkit-animation-name: AccuseWarningFlash;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes AccuseWarningFlash
+{
+  0%
+  {
+    color: #ffffff;
+  }
+  
+  50%
+   {
+    color: #a61d00;
+  }
+  
+  100%
+   {
+    color: #ffffff;
+  }
+}
+
+@-webkit-keyframes AccuseWarningFlash
+{
+  0%
+  {
+    color: #ffffff;
+  }
+  
+  50%
+   {
+    color: #a61d00;
+  }
+  
+  100%
+   {
+    color: #ffffff;
+  }
+}
+
+.playerCardButton-lockdown
+{
+  float: right;
+  display: block;
+  position: relative;
+  font-size: small;
+  z-index: 1;
+}
+
+.playerCardViewMaintenanceCostContainer
+{
+  position: relative;
+  top: 10px;
+}
+
+.playerCard-trackedMoney
+{
+  color: white;
+  font-family: FollowTheMoneyFont;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+}
+
+.playerCard-trackedMoney-Container
+{
+  top: 35%;
+  left: 12px;
+  font-size: 0.7em;
+  position: absolute;
+  background: #51a6f4;
+  width: 60%;
+  padding: 4px;
+}
+
+.playerCard-trackedMoney-left
+{
+  float: left;
+}
+
+.playerCard-trackedMoney-right
+{
+  float: right;
+}
+
+.playerCard-trackedMoney
+{
+  font-size: small;
+}
+
+#trackedMoney
+{
+  font-size: medium;
+}
+
+.playerCardInteractiveSection
+{
+  width: 100%;
+  position: absolute;
+  top: 64%;
+}
+
+.playerCardView-terrorist
+{
+  top: 100%;
+}

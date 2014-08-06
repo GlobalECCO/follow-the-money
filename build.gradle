@@ -1,0 +1,22 @@
+apply plugin: 'base'
+
+task dist(type:Zip) {
+  baseName = "app"
+  destinationDir = new File("$projectDir/target")
+  includes = [
+    "client/",
+    "lib/",
+    "node_modules/",
+    "server/",
+    "shared/",
+    "FTM-game-icon.png",
+    "ftm.js",
+    "gamepage.html",
+    "index.html",
+    "package.json"
+  ]
+
+
+  from projectDir
+
+}

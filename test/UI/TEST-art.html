@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Follow The Money</title>
+    <link rel='stylesheet' type='text/css' href='style_main.css'/>
+    <link rel='stylesheet' type='text/css' href='style_PlayerCard.css'/>
+    <link rel='stylesheet' type='text/css' href='style_NetworkNodes.css'/>
+    <script src='http://code.jquery.com/jquery-1.9.1.js'></script>
+    <script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <script type='text/javascript' src='UIPlayerCard.js'></script>
+    <script type='text/javascript' src='UINetworkNode.js'></script>
+  </head>
+  <body>
+
+    <script type='text/javascript'>
+      // player cards
+      var temp1 = new PlayerCard($('body'), 'portrait-funder01', "BlastCorp", PlayerCardThemes.redPlayer,5);
+      var temp2 = new PlayerCard($('body'), 'portrait-leader01', "Mr. X", PlayerCardThemes.redLeader,10);
+      var temp3 = new PlayerCard($('body'), 'portrait-terrorist01', "Minion 1", PlayerCardThemes.redTerrorist, 6);
+      var temp4 = new PlayerCard($('body'), 'portrait-blueagent01', "Agent 1", PlayerCardThemes.blueAgent);
+
+      temp1.setPaymentMeter('50%');
+      temp1.setFundsMeter('70%');
+
+      // network nodes
+      var nid1 = new NetworkNode ($('body'), "Ameribank", NetworkNodeThemes.bank);
+      var nid2 = new NetworkNode ($('body'), "Eastern Union", NetworkNodeThemes.wireTransfer);
+
+      var highlighted = false;
+      var selected = false;
+      $(document).ready(
+      function () {
+        $('.highlight').click(
+          function () {
+            highlighted = !highlighted;
+            nid1.highlight(highlighted);
+            temp1.highlight(highlighted);
+            temp2.highlight(highlighted);
+            temp3.highlight(highlighted);
+            temp4.highlight(highlighted);
+          }
+        );
+        $('.select').click(
+          function () {
+            selected = !selected;
+            nid1.select(selected);
+            temp1.select(selected);
+            temp2.select(selected);
+            temp3.select(selected);
+            temp4.select(selected);
+          }
+        )
+      }
+      );
+    </script>
+    <div class="btn highlight">highlight</div>
+    <div class="btn select">select</div>
+  </body>
+ </html>

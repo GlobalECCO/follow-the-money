@@ -1,0 +1,166 @@
+.nodeViewContainer
+{
+  min-height: 100px;
+  width: 360px;
+  background-color: #000000;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  z-index: 4;
+  padding: 4px;
+  margin-top: -200px;
+  box-shadow: 0px 0px 14px 0px #ff9500;
+
+  animation-duration: 0.5s;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-iteration-count: 1;
+}
+
+.nodeViewPointer-before, .nodeViewPointer-after
+{
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+  top: 30px;
+
+  transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+}
+
+.nodeViewPointer-before
+{
+  z-index: -100;
+  box-shadow: 0px 0px 14px 0px #ff9500;
+}
+
+.nodeViewPointer-before-left, .nodeViewPointer-after-left
+{
+  left: -20px;
+}
+
+.nodeViewPointer-before-right, .nodeViewPointer-after-right
+{
+  right: -20px;
+}
+
+.nodeViewPointer-after-left
+{
+  box-shadow: 10px -10px 0px 10px black;
+}
+
+.nodeViewPointer-after-right
+{
+  box-shadow: -10px 10px 0px 10px black;
+}
+
+.nodeViewContainer-faded
+{
+  background-color: rgba(0, 0, 0, 0.62);
+}
+
+.nodeViewPointer-before-faded, .nodeViewPointer-after-faded
+{
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+@keyframes fadeIn
+{
+  0%
+  {
+    opacity: 0.0;
+  }
+  100%
+  {
+    opacity: 1.0;
+ }
+}
+
+@-webkit-keyframes fadeIn
+{
+  0%
+  {
+    opacity: 0.0;
+  }
+  100%
+  {
+    opacity: 1.0;
+ }
+}
+
+.nodeViewHeading
+{
+  position: relative;
+  font-family: FollowTheMoneyFontBold;
+  font-size: 20px;
+  color: #dddddd;
+  text-align: right;
+  margin-bottom: 8px;
+  margin-right: 4px;
+}
+
+.nodeViewSubHeading
+{
+  position: relative;
+  font-family: FollowTheMoneyFontBold;
+  font-size: 12px;
+  color: #dddddd;
+  text-align: right;
+  margin-right: 4px;
+}
+
+.nodeViewConfidenceLow:after
+{
+  content: 'Confidence: Low';
+}
+
+.nodeViewConfidenceMedium:after
+{
+  content: 'Confidence: Medium';
+}
+
+.nodeViewConfidenceStrong:after
+{
+  content: 'Confidence: Strong';
+}
+
+.nodeViewConfidenceGuaranteed:after
+{
+  content: 'Confidence: Guaranteed';
+}
+
+.nodeViewInteractiveSection
+{
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+.nodeViewAgentList, .nodeViewTransferList
+{
+  width: 100%;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nodeViewTransferList
+{
+  max-height: 300px;
+}
+
+.playerCardAgentListOffsetSaysRyan
+{
+  margin: 0;
+  top: 0;
+}

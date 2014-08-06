@@ -1,0 +1,88 @@
+.creditsContainer
+{
+  z-index: 10000000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.0);
+  text-align: center;
+}
+
+.creditsInnerContainer
+{
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0,0,0,0.75);
+  text-align: center;
+}
+
+.creditsButtonContainer
+{
+  position: fixed;
+  padding: 4px;
+  left: 50%;
+  top: 58px;
+}
+
+.credits-header
+{
+  font-family: FollowTheMoneyFont;
+  color: red;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  left: 0px;
+  width: 100%;
+  font-size: 3.0em;
+  line-height: 0.85em;
+}
+
+.credits-footer
+{
+  font-family: FollowTheMoneyFont;
+  color: red;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  font-size: 3.0em;
+  line-height: 1.1em;
+  margin-bottom: 40px;
+}
+
+.credits-block
+{
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  left: 0px;
+}
+
+.credits-block-title
+{
+  font-family: FollowTheMoneyFont;
+  color: red;
+  font-size: 0.8em;
+  text-align: center;
+  font-size: 4.0em;
+  line-height: 0.85em;
+  margin-bottom: 0.25em;
+}
+
+.credits-block-text
+{
+  font-family: FollowTheMoneyFont;
+  color: red;
+  font-size: 0.8em;
+  text-align: center;
+  font-size: 6.0em;
+  line-height: 0.85em;
+  margin-top: 0.25em;
+}

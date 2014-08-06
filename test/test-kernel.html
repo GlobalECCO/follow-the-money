@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <title>Follow The Money</title>
+
+    <!-- temp - move styles out to stylesheet -->
+    <style>
+
+      .portlet {
+          width: 200px;
+          float: left;
+          border: 10px solid #ddd;
+          margin-right: 10px;
+      }
+
+      .portlet .title {
+          background: #555;
+          color: #fff;
+          padding: 5px;
+          margin: -10px -10px 0 -10px;
+      }
+
+      .clear {
+          clear: both;
+      }
+
+  </style>
+
+  <script src='../lib/kernel.js'></script>
+  <script src='../lib/jquery-2.0.3.js'></script>
+  <script src='../client/kernel.extension.js'></script>
+  <script src='../client/kernel.hub.main.js'></script>
+  <script src='modules/test.box.js'></script>
+  <script src='modules/test.list.js'></script>
+  <script src='modules/test.count.js'></script>
+  <script src='modules/test.leftbar.js'></script>
+
+  <script>
+
+    // Register the modules (id, type)
+    Kernel.register([
+        {id: 'module-leftbar', type: 'TestLeftBar', config: {renderTo: '#left'}},
+        {id: 'module-box',    type: 'TestBox',   config: {renderTo: '#top'}},
+        {id: 'module-count1', type: 'TestCount', config: {renderTo: '#center'}},
+        {id: 'module-count2', type: 'TestCount', config: {renderTo: '#bottom'}},
+        {id: 'module-list1',  type: 'TestList',  config: {renderTo: '#center'}},
+        {id: 'module-list2',  type: 'TestList',  config: {renderTo: '#bottom'}}
+    ]);
+
+    // Start the modules after the DOM is ready
+    $('document').ready(function() {
+
+        Kernel.start([
+           {id: 'module-leftbar'},
+           {id: 'module-box'},
+           {id: 'module-count1'},
+           {id: 'module-count2', config: {title: 'Title OVERRIDE'}},
+           {id: 'module-list1'},
+           {id: 'module-list2', config: {title: 'Title OVERRIDE 2'}}
+        ]);
+    });
+
+    var test = {
+      test:function() {
+        alert('asdf');
+      }
+    };
+
+    Kernel.decorateMethods(Kernel, test);
+
+</script>
+
+</head>
+<body>
+  <br/>
+  <br/>
+    <div style='width:1000px;height:768px;margin-left: auto;margin-right:auto'>
+    <div id='left' style='border: 5px solid #f00; padding: 0px; float:left;width:150px;height:700px'></div>
+    <div id='middle' style='border: 5px solid #0f0; padding:0px; float:left;width:666px;height:700px'>
+      <div id='top' style='border: 5px solid #ff0; padding: 10px;'></div>
+      <div id='center' style='border: 5px solid #0ff; padding: 10px;'><br class='clear'/></div>
+      <div id='bottom' style='border: 5px solid #f0f; padding: 10px;'><br class='clear'/></div>
+    </div>
+    <div id='right' style='border: 5px solid #00f; padding:0px; float:left;width:150px;height:700px'></div>
+  </div>
+</body>
+</html>

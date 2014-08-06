@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <title>Follow the Money (maint. page)</title>
+    <script>
+        window.onload = function() {
+            window.setTimeout("refreshGames()", 500);
+        }
+
+        var refreshGames = function() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                    if (document.getElementById("gamelist").innerHTML != xmlhttp.responseText) {
+                        document.getElementById("gamelist").innerHTML = xmlhttp.responseText;
+                    }
+                    window.setTimeout("refreshGames()", 500);
+                }
+            }
+            xmlhttp.open("GET", "/gamelist?rand="+parseInt(Math.random()*99999999), true);
+            xmlhttp.send();
+        }
+
+        var createNewGame = function() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                    var gameData = JSON.parse(xmlhttp.responseText);
+                    if (gameData.stat === "OK") {
+                        playGame(gameData.glst.game.gid);
+                    }
+                }
+            }
+            var query = "";
+            for (var userIndex = 0; userIndex < 2; ++userIndex) {
+                var keyName = "user" + (userIndex + 1);
+                var elem = document.getElementById(keyName);
+                if (elem.value) {
+                    if (userIndex > 0) {
+                        query += "&";
+                    }
+                    query += "user" + (userIndex + 1) + "=" + elem.value;
+                }
+                else {
+                    break;
+                }
+            }
+            xmlhttp.open("GET", "/new?" + query, true);
+            xmlhttp.send();
+        }
+
+        function playGame(id) {
+
+            //redirect to the play existing game page
+            window.location = "/play?gid=" + id +
+                "&user=" + document.getElementById('MyName').value +
+                "&dbg=1";
+        }
+
+    </script>
+</head>
+<body>
+    <form name="Login">
+        My Name: <input type="text" id="MyName" ><br/>
+    </form>
+
+    <h2>Here are some games:</h2>
+
+    <div id='gamelist'></div>
+
+    <br/>
+    <form name="newGame" method="get">
+        State: <input type="text" id="user1"><br/>
+        Terrorist: <input type="text" id="user2"><br/>
+    </form>
+    <button type="button" onclick="createNewGame()">New Game</button>
+</body>
+</html>
+

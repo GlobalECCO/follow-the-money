@@ -1,0 +1,269 @@
+.transactionsContainer
+{
+  position: absolute;
+  float: left;
+  top: 60px;
+  left: 8px;
+  width: 227px;
+  height: 80%;
+}
+
+.transactionItemContainer
+{
+  display: block;
+  height: 28px;
+  /*margin: 4px;*/
+  position: relative;
+  margin-bottom: 12px;
+  padding: 4px;
+  width:200px;
+}
+
+.pendingTransactionsContainer, .inTransitTransactionsContainer
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  z-index: 3;
+  font-family: FollowTheMoneyFont;
+}
+
+.transactionsHeading
+{
+  font-size: 14px;
+  text-align: center;
+  margin: 2px;
+  margin-bottom: 0px;
+  background-color: #141414;
+  border: 2px solid #666666;
+  padding: 2px;
+  width:200px;
+}
+
+.transactionsSubHeading
+{
+  background-color: #444;
+  height: 20px;
+  text-align: center;
+  padding: 2px;
+  margin: 2px;
+  margin-bottom: 6px;
+  margin-top: -2px;
+  border: 2px solid #666666;
+  width:200px;
+}
+
+.transactionsItem
+{
+  color: #ffffff;
+  font-size: 11px;
+  text-align: center;
+  width: 200px;
+  height: 100%;
+  /*padding-top: 12px;*/
+  padding-top: 5%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  vertical-align: middle;
+}
+
+.transactionsItem-hover
+{
+  background-color: #ff9500 !important;
+  color: #141414 !important;
+  cursor: pointer !important;
+  border: 2px solid #ff9500 !important;
+}
+
+.transactionsItem-pending
+{
+  background-color: #51a6f4;
+  width: 80%;
+  border: 2px solid #51a6f4;
+}
+
+.transactionsItem-inTransit
+{
+  background-color: #0E6CC2;
+  width: 90%;
+  border: 2px solid #0E6CC2;
+}
+
+.transactionsItem-Disabled
+{
+  background-color: #26537c;
+  color: #042a5b;
+  cursor: default;
+  width: 100%;
+  border: 2px solid #26537c;
+}
+
+.transactionsItem-Disabled:hover
+{
+  background-color: #26537c;
+  color: #042a5b;
+  cursor: default;
+  border: 2px solid #26537c;
+}
+
+.transactionsItem-progressMeter
+{
+  width: 92%;
+  height: 3px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 4px;
+  left: 4%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.transactionsItem-progressMeter-segment
+{
+  background-color: #141414;
+  box-shadow: 2px 0px 0px 0px #0E6CC2 inset;
+  height: 100%;
+  display: inline-block;
+  margin: 0px;
+  text-align: left;
+  position: relative;
+  float: left;
+}
+
+.transactionsItem-progressMeter-segment-full
+{
+  background-color: #f5c400;
+  box-shadow: 2px 0px 0px 0px #0E6CC2 inset;
+}
+
+.transactionsItem-optionButtonsContainer, .transactionsItem-optionButtonsContainerSmall
+{
+  display: inline-block;
+  height: 100%;
+  height: 88%;
+  width: 16%;
+  min-width: 24px;
+  position: absolute;
+  right: -4px;
+  padding-top: 5%;
+  margin-left: 4px;
+  top: 0px;
+  border: 2px solid transparent;
+}
+
+.transactionsItem-optionButtonsContainerSmall
+{
+  width: 0%;
+  right: -13px;
+}
+
+.transactionsItem-optionButtons
+{
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+}
+
+.transactionsItem-optionButtons-row
+{
+  display: block;
+  height: 46%;
+  width: 100%;
+  position: absolute;
+}
+
+.top-row
+{
+  top: 0px;
+}
+
+.bottom-row
+{
+  bottom: 0px;
+}
+
+.transactionsItem-option-delete, .transactionsItem-option-edit, .transactionsItem-option-delete-static, .transactionsItem-option-edit-static
+{
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.transactionsItem-option-delete-disabled, .transactionsItem-option-delete-disabled:hover, .transactionsItem-option-edit-disabled, .transactionsItem-option-edit-disabled:hover
+{
+  background-color: black;
+  color: white;
+
+  border: outset;
+  border-color: black;
+  border-width: 2px;
+
+  -webkit-filter: brightness(0.5);
+  -moz-filter: brightness(0.5);
+  -ms-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.transactionsItem-option-delete, .transactionsItem-option-delete-static
+{
+  background-image: url('../images/icon_transactions_delete_20px.png');
+}
+
+.transactionsItem-option-edit, .transactionsItem-option-edit-static
+{
+  background-image: url('../images/icon_transactions_edit_20px.png');
+}
+
+.transactionsItem-option-delete:hover
+{
+  background-image: url('../images/icon_transactions_delete_hover_20px.png');
+}
+
+.transactionsItem-option-edit:hover
+{
+  background-image: url('../images/icon_transactions_edit_hover_20px.png');
+}
+
+.transactionsItem-option-delete-disabled
+{
+  /*background-image: url('../images/icon_transactions_delete_disabled_20px.png');*/
+  background-image: url('../images/icon_transactions_delete_20px.png');
+}
+
+.transactionsItem-option-edit-disabled
+{
+  /*background-image: url('../images/icon_transactions_edit_disabled_20px.png');*/
+  background-image: url('../images/icon_transactions_edit_20px.png');
+}
+
+.transactionsItem-option-delete-disabled:hover
+{
+  /*background-image: url('../images/icon_transactions_delete_disabled_20px.png');*/
+  background-image: url('../images/icon_transactions_delete_20px.png');
+}
+
+.transactionsItem-option-edit-disabled:hover
+{
+  /*background-image: url('../images/icon_transactions_edit_disabled_20px.png');*/
+  background-image: url('../images/icon_transactions_edit_20px.png');
+}
+
+.transactionItem-courier
+{
+  position: absolute;
+  right: -12px;
+  top: -6px;
+  background-size: 100%;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/item_courier_100px.png');
+}
+
+.item-hidden
+{
+  display: none;
+}
