@@ -6,27 +6,29 @@ var NodeTypes = require('../../shared/node_types.js').NodeTypes;
 var Util = require('./util.js');
 var BalanceValues = require('../../shared/balance_values.js').BalanceValues;
 
-// Node naming.
-var TERRORIST_NAMES = [['Paula', 'Gerald', 'Brian', 'Janet', 'Terry', 'Joan', 'Cheryl', 'Julia', 'Teresa', 'Ralph',
-                        'Matt', 'Victor', 'Harry', 'Louise', 'David', 'Norma', 'Steve', 'Andrew', 'Helen',
-                        'Amy', 'Lois', 'Ronald', 'Alan', 'Larry', 'Anne', 'Chris', 'Greg', 'Brandon'],
-                       ['Cooper', 'Griffin', 'Butler', 'Sanchez', 'Jackson', 'Bennett', 'Garcia', 'Wood',
-                        'Perez', 'Lee', 'Moore', 'Bailey', 'Russell', 'Yamato', 'Anderson', 'Ross', 'Reed',
-                        'Watson', 'Diaz', 'Jenkins', 'Murphy', 'Thompson', 'Peterson', 'Schmid', 'Breit',
-                        'Alpert', 'Clepper', 'Rink', 'Cook', 'Kahre', 'Blackwood', 'Zuuco', 'Nishida',
-                        'Zahm', 'Deas', 'Fleece', 'Hunter', 'Sperling', 'Tipton', 'Kiker', 'Prevattte']];
 
-var BANK_NAMES = [['1st', '2nd', '3rd', '4th', 'Navy', 'New', 'Allied', 'South', 'North', 'Valley', 'U.S.'],
-                  ['Citizens', 'State', 'Financial', 'Colonial', 'United', 'Associated', 'Community'],
-                  ['Bank', 'Group', 'Credit Union', 'of the West', 'Corp.', 'Trust', 'Holdings', 'of the North', 'Inc.']];
-
-var HAWALA_NAMES = [['Al', 'As', 'Ba', 'Bou', 'Ka', 'Ma', 'Na', 'Ta', 'Sai'],
-                    ['bas', 'saf', 'rad', 't', 'rag', 'na', 'lo'],
-                    ['ry', 'mi', 'ma', 'nam', 'ari', 'ashi', 'non', 'our']];
 
 //------------------------------------------------------------------------------
 // Generate a new money network.
 this.generate = function() {
+  // Node naming.
+  var TERRORIST_NAMES = [ 'Paula', 'Gerald', 'Brian', 'Janet', 'Terry', 'Joan', 'Cheryl', 'Julia', 'Teresa', 'Ralph',
+                          'Matt', 'Victor', 'Harry', 'Louise', 'David', 'Norma', 'Steve', 'Andrew', 'Helen',
+                          'Amy', 'Lois', 'Ronald', 'Alan', 'Larry', 'Anne', 'Chris', 'Greg', 'Brandon',
+                          'Cooper', 'Griffin', 'Butler', 'Sanchez', 'Jackson', 'Bennett', 'Garcia', 'Wood',
+                          'Perez', 'Lee', 'Moore', 'Bailey', 'Russell', 'Yamato', 'Anderson', 'Ross', 'Reed',
+                          'Watson', 'Diaz', 'Jenkins', 'Murphy', 'Thompson', 'Peterson', 'Schmid', 'Breit',
+                          'Alpert', 'Clepper', 'Rink', 'Cook', 'Kahre', 'Blackwood', 'Zuuco', 'Nishida',
+                          'Zahm', 'Deas', 'Fleece', 'Hunter', 'Sperling', 'Tipton', 'Kiker', 'Prevattte'];
+
+  var BANK_NAMES = [['1st', '2nd', '3rd', '4th', 'Navy', 'New', 'Allied', 'South', 'North', 'Valley', 'U.S.'],
+                    ['Citizens', 'State', 'Financial', 'Colonial', 'United', 'Associated', 'Community'],
+                    ['Bank', 'Group', 'Credit Union', 'of the West', 'Corp.', 'Trust', 'Holdings', 'of the North', 'Inc.']];
+
+  var HAWALA_NAMES = [['Al', 'As', 'Ba', 'Bou', 'Ka', 'Ma', 'Na', 'Ta', 'Sai'],
+                      ['bas', 'saf', 'rad', 't', 'rag', 'na', 'lo'],
+                      ['ry', 'mi', 'ma', 'nam', 'ari', 'ashi', 'non', 'our']];
+
   // Maximum of 10 attempts to generate network.
   var attempt = 0;
   while (true) {
@@ -414,12 +416,9 @@ function getNameForNode(type, namePool) {
     return 'Hawala ' + first + second + third;
   }
   else {
-    var firstIndex  = Util.randRangeInt(0, namePool.terrorists[0].length-1);
-    var secondIndex = Util.randRangeInt(1, namePool.terrorists[1].length-1);
-    var first = namePool.terrorists[0][firstIndex];
-    var second = namePool.terrorists[1][secondIndex];
-    namePool.terrorists[0].splice(firstIndex, 1);
-    namePool.terrorists[1].splice(secondIndex, 1);
-    return /*first + ' ' +*/ second;
+    var firstIndex  = Util.randRangeInt(0, namePool.terrorists.length-1);
+    var first = namePool.terrorists[firstIndex];
+
+    return namePool.terrorists.splice(firstIndex, 1);
   }
 }
