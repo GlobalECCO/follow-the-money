@@ -2,3 +2,4 @@ node_modules
 consoleoutput.txt
 output.log
 bees-env.xml
+.DS_Store
